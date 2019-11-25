@@ -17,7 +17,6 @@
 	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-employer.job.list.label.reference
 	<definition name="employer/job/list" extends="master">
 		<put-attribute name="body" type="template" value="../employer/job/list.jsp" />
 	</definition>
