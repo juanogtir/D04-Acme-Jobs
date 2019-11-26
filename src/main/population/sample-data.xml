@@ -630,7 +630,6 @@
 
 	<bean name="job1" class="acme.entities.jobs.Job">
 		<property name="referenceNumber" value="EMPI-JOBA" />
-		<property name="status" value="published" />
 		<property name="title" value="Title 1" />
 		<property name="deadline" value="2030/12/11 23:59" />
 		<property name="salary" value="€ 15,000.98" />
@@ -642,7 +641,6 @@
 	
 	<bean name="job2" class="acme.entities.jobs.Job">
 		<property name="referenceNumber" value="EMPI-JOBB" />
-		<property name="status" value="draft" />
 		<property name="title" value="Title 2" />
 		<property name="deadline" value="2030/12/11 23:59" />
 		<property name="salary" value="€ 20,000.00" />
