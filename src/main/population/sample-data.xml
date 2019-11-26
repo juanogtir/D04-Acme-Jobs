@@ -33,6 +33,36 @@
 	<bean name="authenticatedAuthenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="authenticatedUserAccount" />
 	</bean>
+	
+	<!-- Workers -->
+	<bean name="worker1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker1"/>
+		<property name="password" value="worker1"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker"/>
+				<property name="surname" value="One"/>
+				<property name="email" value="worker1@acme.com"/>
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="worker1Worker"/>
+				<ref bean="worker1Authenticated"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="worker1Worker" class="acme.entities.roles.Worker">
+		<property name="qualifications" value="Example 1 Qualifications Records"/>
+		<property name="skills" value="Example 1 Skills Records"/>
+		<property name="userAccount" ref="worker1UserAccount"/>
+	</bean>
+	
+	<bean name="worker1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="worker1UserAccount"/>
+	</bean>
 
 	<!-- Employers -->
 
@@ -59,10 +89,70 @@
 		<property name="sector" value="Sector 1" />
 		<property name="userAccount" ref="employer1UserAccount" />
 	</bean>
+	
 	<bean name="employer1Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="employer1UserAccount" />
 	</bean>
+	
+	<bean name="employer2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer2" />
+		<property name="password" value="employer2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Employer" />
+				<property name="surname" value="Two" />
+				<property name="email" value="employer2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="employer2Employer" />
+				<ref bean="employer1Authenticated" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="employer2Employer" class="acme.entities.roles.Employer">
+		<property name="company" value="Employer 2, Inc." />
+		<property name="sector" value="Sector 3" />
+		<property name="userAccount" ref="employer2UserAccount" />
+	</bean>
+	
+	<!-- Descriptors -->
 
+	<bean name="descriptor1Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description sample of a Descriptor" />
+		<property name="duties">
+			<list>
+				<ref bean="duty1Duty" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="descriptor2Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description sample of a Descriptor2" />
+		<property name="duties">
+			<list>
+				<ref bean="duty2Duty" />
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Duties -->
+
+	<bean name="duty1Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample" />
+		<property name="description" value="Description of a duty" />
+		<property name="timeAmount" value="6.75" />
+	</bean>
+	
+	<bean name="duty2Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample2" />
+		<property name="description" value="Description of a duty2" />
+		<property name="timeAmount" value="2.75" />
+	</bean>
+	
 	<!-- SHOUT'S BEANS -->
 
 	<bean id="shout01" class="acme.entities.shouts.Shout">
@@ -192,8 +282,6 @@
 		<property name="bronzeGoal" value="Dab to yourself" />
 		<property name="bronzeReward" value="1€" />
 	</bean>
-
-
 
 	<!-- Announcement's beans -->
 
@@ -630,6 +718,7 @@
 
 	<bean name="job1" class="acme.entities.jobs.Job">
 		<property name="referenceNumber" value="EMPI-JOBA" />
+		<property name="status" value="published" />
 		<property name="title" value="Title 1" />
 		<property name="deadline" value="2030/12/11 23:59" />
 		<property name="salary" value="€ 15,000.98" />
@@ -637,48 +726,20 @@
 		<property name="moreInfo" value="http://www.moreinfo.com/" />
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer1Employer" />
+		<property name="descriptor" ref="descriptor1Descriptor" />
 	</bean>
 	
 	<bean name="job2" class="acme.entities.jobs.Job">
 		<property name="referenceNumber" value="EMPI-JOBB" />
+		<property name="status" value="draft" />
 		<property name="title" value="Title 2" />
 		<property name="deadline" value="2030/12/11 23:59" />
 		<property name="salary" value="€ 20,000.00" />
 		<property name="description" value="what is a haiku" />
 		<property name="moreInfo" value="http://www.moreinfo.com/" />
 		<property name="finalMode" value="true" />
-		<property name="employer" ref="employer1Employer" />
-	</bean>
-	
-	<!-- Worker's bean -->
-	<bean name="worker1UserAccount" class="acme.framework.entities.UserAccount">
-		<property name="username" value="worker1"/>
-		<property name="password" value="worker1"/>
-		<property name="enabled" value="true"/>
-		<property name="identity">
-			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Worker"/>
-				<property name="surname" value="One"/>
-				<property name="email" value="worker1@acme.com"/>
-			</bean>
-		</property>
-		<property name="roles">
-			<list>
-				<ref bean="worker1Worker"/>
-				<ref bean="worker1Authenticated"/>
-			</list>
-		</property>
-	</bean>
-
-	
-	<bean name="worker1Worker" class="acme.entities.roles.Worker">
-		<property name="qualifications" value="Example 1 Qualifications Records"/>
-		<property name="skills" value="Example 1 Skills Records"/>
-		<property name="userAccount" ref="worker1UserAccount"/>
-	</bean>
-	
-	<bean name="worker1Authenticated" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="worker1UserAccount"/>
+		<property name="employer" ref="employer2Employer" />
+		<property name="descriptor" ref="descriptor2Descriptor" />
 	</bean>
 	
 	<!-- Application's bean -->

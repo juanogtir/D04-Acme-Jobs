@@ -5,7 +5,10 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Index;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -16,6 +19,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.descriptors.Descriptor;
 import acme.entities.roles.Employer;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
@@ -25,9 +29,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-//@Table(indexes = {
-//	@Index(columnList = "deadline"), @Index(columnList = "ticker")
-//})
+@Table(indexes = {
+	@Index(columnList = "deadline")
+})
 public class Job extends DomainEntity {
 
 	// Serialisation identifier
@@ -39,6 +43,10 @@ public class Job extends DomainEntity {
 	@NotBlank
 	@Pattern(regexp = "^([a-zA-Z]{4}[-][a-zA-Z]{4})?$")
 	private String				referenceNumber;
+
+	@NotBlank
+	@Pattern(regexp = "^(draft)?(published)?$")
+	private String				status;
 
 	@NotBlank
 	private String				title;
@@ -57,10 +65,6 @@ public class Job extends DomainEntity {
 	@URL
 	private String				moreInfo;
 
-	//@NotBlank
-	//@Pattern(regexp = "^(draft)?(published)?$")
-	//private String				status;
-
 	private boolean				finalMode;
 
 	//Derived attributes
@@ -71,4 +75,9 @@ public class Job extends DomainEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Employer			employer;
+
+	@NotNull
+	@Valid
+	@OneToOne(optional = false)
+	private Descriptor			descriptor;
 }
