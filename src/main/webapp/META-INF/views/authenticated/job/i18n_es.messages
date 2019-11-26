@@ -8,16 +8,20 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.job.form.label.referenceNumber = Nº:
-authenticated.job.form.label.title = Título:
-authenticated.job.form.label.deadline = Fecha Fin:
+authenticated.job.form.label.referenceNumber = Referencia:
+authenticated.job.form.label.status = Estado:
+authenticated.job.form.label.title = Titulo:
+authenticated.job.form.label.deadline = Fecha límite:
+authenticated.job.form.label.description = Descripción:
 authenticated.job.form.label.salary = Salario:
-authenticated.job.form.label.description = Descripcion:
 authenticated.job.form.label.moreInfo = Más información:
-authenticated.job.form.label.finalMode = PERO QUE ES ESTO:
-authenticated.job.form.label.employer = QUE PONGO AQUI XD:
-authenticated.job.form.button.return = Return
+authenticated.job.form.label.status = Finalizado:
+authenticated.job.form.label.descriptor = Descriptor:
+authenticated.job.form.label.descriptionDescriptor = Descripción:
+authenticated.job.form.label.duties = Labores:
 
-authenticated.job.list.label.referenceNumber = Nº:
-authenticated.job.list.label.title = Título:
-authenticated.job.list.label.deadline = Fecha Fin:
+authenticated.job.form.button.return = Volver
+
+authenticated.job.list.label.referenceNumber = Referencia
+authenticated.job.list.label.title = Título
+authenticated.job.list.label.deadline = Fecha límite

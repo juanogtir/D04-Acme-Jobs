@@ -1,5 +1,5 @@
 /*
- * AuthenticatedAcmeRequestRepository.java
+ * ConsumerAcmeRequestRepository.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -24,9 +24,8 @@ import acme.framework.repositories.AbstractRepository;
 public interface AuthenticatedJobRepository extends AbstractRepository {
 
 	@Query("select j from Job j where j.id = ?1")
-	Job findOneById(int id);
+	Job findOneJobById(int id);
 
 	@Query("select j from Job j where j.deadline >= current_date()")
 	Collection<Job> findManyAll();
-
 }

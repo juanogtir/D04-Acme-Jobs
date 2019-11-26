@@ -32,5 +32,4 @@ public class AuthenticatedJobController extends AbstractController<Authenticated
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
-
 }

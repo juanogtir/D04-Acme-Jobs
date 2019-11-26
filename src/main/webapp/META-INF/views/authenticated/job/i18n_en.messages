@@ -8,16 +8,21 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.job.form.label.referenceNumber = Ticker:
+authenticated.job.form.label.referenceNumber = Reference:
+authenticated.job.form.label.status = Status:
 authenticated.job.form.label.title = Title:
 authenticated.job.form.label.deadline = Deadline:
-authenticated.job.form.label.salary = Salary:
 authenticated.job.form.label.description = Description:
-authenticated.job.form.label.moreInfo = More info:
-authenticated.job.form.label.finalMode = Final mode:
-authenticated.job.form.label.employer = Employer:
+authenticated.job.form.label.salary = Salary:
+authenticated.job.form.label.moreInfo = MoreInfo:
+authenticated.job.form.label.status = Final Mode:
+authenticated.job.form.label.descriptor = Descriptor:
+authenticated.job.form.label.descriptionDescriptor = Description:
+authenticated.job.form.label.duties = Duties:
+
+
 authenticated.job.form.button.return = Return
 
-authenticated.job.list.label.referenceNumber = Ticker:
-authenticated.job.list.label.title = Title:
-authenticated.job.list.label.deadline = Deadline:
+authenticated.job.list.label.referenceNumber = Reference
+authenticated.job.list.label.title = Title
+authenticated.job.list.label.deadline = Deadline
