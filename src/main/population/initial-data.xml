@@ -81,7 +81,7 @@
 		<property name="threshold" value="1.0"/>
 	</bean>
 	
-	<!-- Worker's bean -->
+	<!-- Worker's bean 
 	<bean name="worker1UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="worker1"/>
 		<property name="password" value="worker1"/>
@@ -110,5 +110,5 @@
 	<bean name="worker1Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="worker1UserAccount"/>
 	</bean>
-	
+	-->
 </beans>

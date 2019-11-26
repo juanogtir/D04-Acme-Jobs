@@ -602,6 +602,7 @@
 			</list>
 		</property>
 	</bean>
+
 	
 	<bean name="worker1Worker" class="acme.entities.roles.Worker">
 		<property name="qualifications" value="Example 1 Qualifications Records"/>
@@ -613,8 +614,8 @@
 		<property name="userAccount" ref="worker1UserAccount"/>
 	</bean>
 	
-	
 	<!-- Application's bean -->
+	 
 	<bean name="application1" class="acme.entities.application.Application">
 		<property name="reference" value="ABCD-JJJJ:WWWW"/>
 		<property name="moment" value="2019/06/10 00:00"/>
@@ -646,7 +647,7 @@
 	</bean>
 	
 	<bean name="application4" class="acme.entities.application.Application">
-		<property name="reference" value="abcd-jjjj:wwww"/>
+		<property name="reference" value="abcd-jpjj:wwww"/>
 		<property name="moment" value="2018/06/10 00:00"/>
 		<property name="status" value="pending"/>
 		<property name="statement" value="This is an example 4"/>
@@ -656,7 +657,7 @@
 	</bean>
 	
 	<bean name="application5" class="acme.entities.application.Application">
-		<property name="reference" value="eeee-abcd:wwww"/>
+		<property name="reference" value="eeee-abod:wwww"/>
 		<property name="moment" value="2019/06/10 01:00"/>
 		<property name="status" value="pending"/>
 		<property name="statement" value="This is an example 5"/>
