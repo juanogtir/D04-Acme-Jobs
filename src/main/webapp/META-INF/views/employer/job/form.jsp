@@ -17,12 +17,12 @@
 
 <acme:form>
 	<acme:form-textbox code="employer.job.form.label.referenceNumber" path="referenceNumber"/>
-	<acme:form-textbox code="employer.job.form.label.status" path="status"/>
 	<acme:form-textbox code="employer.job.form.label.title" path="title"/>
 	<acme:form-moment code="employer.job.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="employer.job.form.label.salary" path="salary"/>
 	<acme:form-double code="employer.job.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-double code="employer.job.form.label.description" path="description"/>
+	<%--FinalMode---> check box --%>
 	
   	<acme:form-return code="employer.job.form.button.return"/>
 </acme:form>
