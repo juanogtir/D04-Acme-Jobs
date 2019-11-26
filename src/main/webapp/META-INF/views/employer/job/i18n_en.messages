@@ -15,7 +15,10 @@ employer.job.form.label.deadline = Deadline:
 employer.job.form.label.description = Description:
 employer.job.form.label.salary = Salary:
 employer.job.form.label.moreInfo = MoreInfo:
-employer.job.form.label.finalMode = Final Mode
+employer.job.form.label.status = Final Mode:
+employer.job.form.label.descriptor = Descriptor:
+employer.job.form.label.descriptionDescriptor = Description:
+
 employer.job.form.button.return = Return
 
 employer.job.list.label.referenceNumber = Reference
