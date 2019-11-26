@@ -691,6 +691,7 @@
 		<property name="skills" value="You need to have Skills Example 1"/>
 		<property name="qualifications" value="You need to have Qualifications Example 1"/>
 		<property name="worker" ref="worker1Worker"/>
+		<property name="job" ref="job1"/>
 	</bean>
 	
 	<bean name="application2" class="acme.entities.application.Application">
@@ -701,6 +702,7 @@
 		<property name="skills" value="You need to have Skills Example 2"/>
 		<property name="qualifications" value="You need to have Qualifications Example 2"/>
 		<property name="worker" ref="worker1Worker"/>
+		<property name="job" ref="job1"/>
 	</bean>
 	
 	<bean name="application3" class="acme.entities.application.Application">
@@ -711,6 +713,7 @@
 		<property name="skills" value="You need to have Skills Example 3"/>
 		<property name="qualifications" value="You need to have Qualifications Example 3"/>
 		<property name="worker" ref="worker1Worker"/>
+		<property name="job" ref="job1"/>
 	</bean>
 	
 	<bean name="application4" class="acme.entities.application.Application">
@@ -721,6 +724,7 @@
 		<property name="skills" value="You need to have Skills Example 4"/>
 		<property name="qualifications" value="You need to have Qualifications Example 4"/>
 		<property name="worker" ref="worker1Worker"/>
+		<property name="job" ref="job2"/>
 	</bean>
 	
 	<bean name="application5" class="acme.entities.application.Application">
@@ -731,6 +735,7 @@
 		<property name="skills" value="You need to have Skills Example 5"/>
 		<property name="qualifications" value="You need to have Qualifications Example 5"/>
 		<property name="worker" ref="worker1Worker"/>
+		<property name="job" ref="job2"/>
 	</bean>
 	
 	<bean name="application6" class="acme.entities.application.Application">
@@ -741,6 +746,7 @@
 		<property name="skills" value="You need to have Skills Example 6"/>
 		<property name="qualifications" value="You need to have Qualifications Example 6"/>
 		<property name="worker" ref="worker1Worker"/>
+		<property name="job" ref="job2"/>
 	</bean>
 	
 </beans>
