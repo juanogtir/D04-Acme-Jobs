@@ -16,7 +16,8 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="employer.job.form.label.reference" path="ticker"/>
+	<acme:form-textbox code="employer.job.form.label.referenceNumber" path="referenceNumber"/>
+	<acme:form-textbox code="employer.job.form.label.status" path="status"/>
 	<acme:form-textbox code="employer.job.form.label.title" path="title"/>
 	<acme:form-moment code="employer.job.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="employer.job.form.label.salary" path="salary"/>

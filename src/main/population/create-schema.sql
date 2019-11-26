@@ -131,6 +131,22 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `job` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `final_mode` bit not null,
+        `more_info` varchar(255),
+        `reference_number` varchar(255),
+        `salary_amount` double precision,
+        `salary_currency` varchar(255),
+        `status` varchar(255),
+        `title` varchar(255),
+        `employer_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `non_commercial_banner` (
        `id` integer not null,
         `version` integer not null,
@@ -222,6 +238,9 @@ create index IDX3vwg77973akwy9ilnfq707yt1 on `company` (`stars`);
 create index IDXbm7mwffwxwiukjmbmt9t1qnnu on `company` (`sector`);
 create index IDXq1q335kxox0leg1u9hhndvue1 on `investor` (`stars`);
 create index IDX1slmmcr1g0wv9jbgun6rny0oy on `investor` (`sector`);
+
+    alter table `job` 
+       add constraint UK_bos0omdc9s5vykasqjhwaq65m unique (`reference_number`);
 create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
 create index IDXcp4664f36sgqsd0ihmirt0w0 on `offer` (`ticker`);
 
@@ -265,6 +284,11 @@ create index IDX2qy5jkiqwk6f13kkfq8pu61le on `solicitud` (`ticker`);
        add constraint FK_na4dfobmeuxkwf6p75abmb2tr 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `job` 
+       add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
+       foreign key (`employer_id`) 
+       references `employer` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 

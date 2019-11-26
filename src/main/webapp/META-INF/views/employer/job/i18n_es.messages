@@ -8,7 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-employer.job.form.label.reference = Referencia:
+employer.job.form.label.referenceNumber = Referencia:
+employer.job.form.label.status = Estado:
 employer.job.form.label.title = Titulo:
 employer.job.form.label.deadline = Fecha límite:
 employer.job.form.label.description = Descripcion:
@@ -17,6 +18,6 @@ employer.job.form.label.moreInfo = Más información:
 employer.job.form.label.finalMode = Finalizado
 employer.job.form.button.return = Volver
 
-employer.job.list.label.reference = Referencia
+employer.job.list.label.referenceNumber = Referencia
 employer.job.list.label.title = Título
 employer.job.list.label.deadline = Fecha límite
