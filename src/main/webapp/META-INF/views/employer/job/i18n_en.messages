@@ -18,6 +18,7 @@ employer.job.form.label.moreInfo = MoreInfo:
 employer.job.form.label.status = Final Mode:
 employer.job.form.label.descriptor = Descriptor:
 employer.job.form.label.descriptionDescriptor = Description:
+employer.job.form.label.duties = Duties:
 
 employer.job.form.button.return = Return
 

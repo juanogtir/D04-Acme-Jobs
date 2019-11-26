@@ -42,8 +42,8 @@ public class AuthenticatedJobListService implements AbstractListService<Authenti
 		assert request != null;
 
 		Collection<Job> result;
-
 		result = this.repository.findManyAll();
+
 		return result;
 	}
 }
