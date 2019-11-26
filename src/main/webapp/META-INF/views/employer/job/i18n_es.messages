@@ -9,6 +9,7 @@
 # they accept any liabilities with respect to them.
 
 employer.job.form.label.referenceNumber = Referencia:
+employer.job.form.label.status = Estado:
 employer.job.form.label.title = Titulo:
 employer.job.form.label.deadline = Fecha límite:
 employer.job.form.label.description = Descripción:

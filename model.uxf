@@ -551,7 +551,7 @@ Employer
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>80.0;80.0;10.0;10.0</additional_attributes>
+    <additional_attributes>60.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -595,9 +595,7 @@ Application
 + status: String {NotBlank}
 + statement: String {NotBlank}
 + skills: String {NotBlank}
-+ qualifications: String {NotBlank}
-+ worker: Worker {NotNull}
-+ job: Job {NotNull}</panel_attributes>
++ qualifications: String {NotBlank}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -647,7 +645,7 @@ Registered by v</panel_attributes>
 
 m1=1
 m2=0..*
-has ^</panel_attributes>
+applied by v</panel_attributes>
     <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -662,7 +660,7 @@ has ^</panel_attributes>
 
 m1=1
 m2=0..*
-&lt; connect with
+&lt; applied for
 </panel_attributes>
     <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
   </element>
