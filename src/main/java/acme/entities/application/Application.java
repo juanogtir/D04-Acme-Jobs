@@ -16,6 +16,7 @@ import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 
+import acme.entities.jobs.Job;
 import acme.entities.roles.Worker;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -30,8 +31,8 @@ public class Application extends DomainEntity {
 
 	// regex EEEE-JJJJ:WWWW -> where 'E' is the employer, 'J' is the job and 'W' the worker
 	@NotBlank
-	@Length(max = 15)
-	@Pattern(regexp = "^[a-zA-Z]{4}-[a-zA-Z]{4}([:][a-zA-Z]{4})?$")
+	@Length(min = 5, max = 15)
+	@Pattern(regexp = "^[a-zA-Z]{4}-[a-zA-Z]{4}([:][a-zA-Z]{4})?$")		// this is optional
 	@Column(unique = true)
 	private String				reference;
 
@@ -59,5 +60,10 @@ public class Application extends DomainEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Worker				worker;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Job					job;
 
 }
