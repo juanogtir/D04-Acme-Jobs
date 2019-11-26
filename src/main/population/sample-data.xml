@@ -36,7 +36,7 @@
 
 	<!-- Employers -->
 
-	<bean name="employer1UserAccount" class="acme.framework.entities.UserAccoun">
+	<bean name="employer1UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="employer1" />
 		<property name="password" value="employer1" />
 		<property name="enabled" value="true" />
@@ -57,7 +57,7 @@
 	<bean name="employer1Employer" class="acme.entities.roles.Employer">
 		<property name="company" value="Employer 1, Inc." />
 		<property name="sector" value="Sector 1" />
-		<property name="UserAccount" ref="employer1UserAccount" />
+		<property name="userAccount" ref="employer1UserAccount" />
 	</bean>
 	<bean name="employer1Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="employer1UserAccount" />
@@ -629,23 +629,26 @@
 	<!-- Jobs -->
 
 	<bean name="job1" class="acme.entities.jobs.Job">
-		<property name="referenceNumber" value="EMP1-J061" />
+		<property name="referenceNumber" value="EMPI-JOBA" />
+		<property name="status" value="published" />
 		<property name="title" value="Title 1" />
 		<property name="deadline" value="2030/12/11 23:59" />
 		<property name="salary" value="€ 15,000.98" />
 		<property name="description" value="what is a haiku" />
 		<property name="moreInfo" value="http://www.moreinfo.com/" />
 		<property name="finalMode" value="true" />
-		<property name="employer" value="employer1Employer" />
+		<property name="employer" ref="employer1Employer" />
 	</bean>
+	
 	<bean name="job2" class="acme.entities.jobs.Job">
-		<property name="referenceNumber" value="EMP1-J061" />
+		<property name="referenceNumber" value="EMPI-JOBB" />
+		<property name="status" value="draft" />
 		<property name="title" value="Title 2" />
 		<property name="deadline" value="2030/12/11 23:59" />
 		<property name="salary" value="€ 20,000.00" />
 		<property name="description" value="what is a haiku" />
 		<property name="moreInfo" value="http://www.moreinfo.com/" />
 		<property name="finalMode" value="true" />
-		<property name="employer" value="employer1Employer" />
+		<property name="employer" ref="employer1Employer" />
 	</bean>
 </beans>

@@ -37,8 +37,12 @@ public class Job extends DomainEntity {
 	@Column(unique = true)
 	@Length(min = 5, max = 10)
 	@NotBlank
-	@Pattern(regexp = "^[a-zA-Z]{4}-[a-zA-Z]{4}$")
+	@Pattern(regexp = "^([a-zA-Z]{4}[-][a-zA-Z]{4})?$")
 	private String				referenceNumber;
+
+	@NotBlank
+	@Pattern(regexp = "^(draft)?(published)?$")
+	private String				status;
 
 	@NotBlank
 	private String				title;
