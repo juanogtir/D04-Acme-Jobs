@@ -115,10 +115,14 @@
 		</acme:menu-option>
 		
 		<!--Employer's Selector-->
-			<!--Jobs-->
-			<acme:menu-option code="master.menu.selector.employer" access="hasRole('Employer')">
-				<acme:menu-suboption code="master.menu.employer.list_mine" action="/employer/job/list_mine" />
-			</acme:menu-option>
+		<acme:menu-option code="master.menu.selector.employer" access="hasRole('Employer')">
+			<acme:menu-suboption code="master.menu.employer.job.list_mine" action="/employer/job/list_mine" />
+			<acme:menu-suboption code="master.menu.employer.application.list_mine" action="/employer/application/list_mine" />
+		</acme:menu-option>
+			
+		<acme:menu-option code="master.menu.selector.worker" access="hasRole('Worker')">
+			<acme:menu-suboption code="master.menu.employer.application.list_mine" action="/worker/application/list_mine" />
+		</acme:menu-option>
 
 		 
 	</acme:menu-left>
