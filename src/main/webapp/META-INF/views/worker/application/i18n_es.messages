@@ -8,9 +8,9 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-worker.job.list.label.reference = Número de Referencia
-worker.job.list.label.moment = Momento
-worker.job.list.label.status = Estado
+worker.application.list.label.reference = Número de Referencia
+worker.application.list.label.moment = Momento
+worker.application.list.label.status = Estado
 
 worker.application.form.label.reference = Número de Referencia
 worker.application.form.label.moment = Momento

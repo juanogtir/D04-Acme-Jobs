@@ -41,6 +41,10 @@ public class Job extends DomainEntity {
 	private String				referenceNumber;
 
 	@NotBlank
+	@Pattern(regexp = "^(draft)?(published)?$")
+	private String				status;
+
+	@NotBlank
 	private String				title;
 
 	@NotNull
@@ -56,10 +60,6 @@ public class Job extends DomainEntity {
 
 	@URL
 	private String				moreInfo;
-
-	//@NotBlank
-	//@Pattern(regexp = "^(draft)?(published)?$")
-	//private String				status;
 
 	private boolean				finalMode;
 
