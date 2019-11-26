@@ -599,4 +599,39 @@ Application
 + worker: Worker {NotNull}</panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>70</y>
+      <w>294</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Job
+--
++ reference: String{Unique, NotBlank, Length(min=5,max=10)}
++ title: String{NotBlank}
++ deadline: Date{NotNull, Temporal(TIMESTAMP)}
++ salary: Money{NotNull, Valid}
++ description: String{NotBlank}
++ moreInfo: String{URL}
++ finalMode: boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>175</y>
+      <w>91</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+
+m1=1
+m2=0..*
+Registered by ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
 </diagram>
