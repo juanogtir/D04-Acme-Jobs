@@ -23,9 +23,17 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
+    alter table `descriptor` 
+       drop 
+       foreign key `FK5qnkbqn5yqfcd1exxhhssbf6o`;
+
     alter table `employer` 
        drop 
        foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
+
+    alter table `job` 
+       drop 
+       foreign key `FKfqwyynnbcsq0htxho3vchpd2u`;
 
     alter table `job` 
        drop 
@@ -60,6 +68,10 @@
     drop table if exists `consumer`;
 
     drop table if exists `customization`;
+
+    drop table if exists `descriptor`;
+
+    drop table if exists `duty`;
 
     drop table if exists `employer`;
 
