@@ -1,9 +1,12 @@
 
 package acme.features.employer.job;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.duties.Duty;
 import acme.entities.jobs.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Model;
@@ -55,6 +58,15 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 			model.setAttribute("status", "Draft");
 		}
 
+		Job result;
+		int id;
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneJobById(id);
+		result.getDescriptor().getDuties().size();
+
+		Collection<Duty> dutiesCollection = result.getDescriptor().getDuties();
+		model.setAttribute("dutiesCollection", dutiesCollection);
+
 		request.unbind(entity, model, "referenceNumber", "title", "deadline");
 		request.unbind(entity, model, "salary", "moreInfo", "finalMode");
 	}
@@ -68,6 +80,8 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneJobById(id);
+
+		result.getDescriptor().getDuties().size();
 
 		return result;
 	}

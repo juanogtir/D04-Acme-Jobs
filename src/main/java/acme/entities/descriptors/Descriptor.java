@@ -1,8 +1,10 @@
 
 package acme.entities.descriptors;
 
+import java.util.Collection;
+
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -15,7 +17,6 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-
 public class Descriptor extends DomainEntity {
 
 	// Serialisation identifier
@@ -31,6 +32,6 @@ public class Descriptor extends DomainEntity {
 
 	@NotNull
 	@Valid
-	@ManyToOne(optional = false)
-	private Duty				duties;
+	@OneToMany
+	private Collection<Duty>	duties;
 }
