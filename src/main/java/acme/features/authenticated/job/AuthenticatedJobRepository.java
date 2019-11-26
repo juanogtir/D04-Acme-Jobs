@@ -1,5 +1,5 @@
 /*
- * AuthenticatedEmployerRepository.java
+ * AuthenticatedAcmeRequestRepository.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -10,22 +10,23 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.consumer;
+package acme.features.authenticated.job;
+
+import java.util.Collection;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.roles.Consumer;
-import acme.framework.entities.UserAccount;
+import acme.entities.jobs.Job;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AuthenticatedConsumerRepository extends AbstractRepository {
+public interface AuthenticatedJobRepository extends AbstractRepository {
 
-	@Query("select ua from UserAccount ua where ua.id = ?1")
-	UserAccount findOneUserAccountById(int id);
+	@Query("select j from Job j where j.id = ?1")
+	Job findOneById(int id);
 
-	@Query("select c from Consumer c where c.userAccount.id = ?1")
-	Consumer findOneConsumerByUserAccountId(int id);
+	@Query("select j from Job j where j.deadline >= current_date()")
+	Collection<Job> findManyAll();
 
 }

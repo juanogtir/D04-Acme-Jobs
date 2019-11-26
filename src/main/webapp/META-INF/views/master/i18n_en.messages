@@ -54,6 +54,7 @@ master.menu.authenticated.announcements = Announcements
 master.menu.authenticated.challenge = List challenges
 master.menu.authenticated.companies = Company records
 master.menu.authenticated.investor = Investor records
+master.menu.authenticated.jobs = Jobs
 
 # master.menu.administrator ###################################################
 master.menu.administrator = Administrator

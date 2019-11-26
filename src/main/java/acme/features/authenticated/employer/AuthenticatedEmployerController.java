@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.consumer;
+package acme.features.authenticated.employer;
 
 import javax.annotation.PostConstruct;
 
@@ -18,22 +18,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.roles.Consumer;
+import acme.entities.roles.Employer;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/authenticated/consumer/")
-public class AuthenticatedConsumerController extends AbstractController<Authenticated, Consumer> {
+@RequestMapping("/authenticated/employer/")
+public class AuthenticatedEmployerController extends AbstractController<Authenticated, Employer> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedConsumerCreateService	createService;
+	private AuthenticatedEmployerCreateService	createService;
 
 	@Autowired
-	private AuthenticatedConsumerUpdateService	updateService;
+	private AuthenticatedEmployerUpdateService	updateService;
 
 
 	// Constructors -----------------------------------------------------------

@@ -55,6 +55,9 @@
 				access="isAuthenticated()" />
 			<!--Company records-->
 			<acme:menu-suboption code="master.menu.authenticated.companies" action="/authenticated/company/list" access="isAuthenticated()" />
+			<!-- Jobs -->
+			<acme:menu-suboption code="master.menu.authenticated.jobs" action="/authenticated/job/list" access="isAuthenticated()" />
+			
 		</acme:menu-option>
 
 		<!--Administrator's Selector-->

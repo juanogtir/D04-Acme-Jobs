@@ -10,22 +10,22 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.consumer;
+package acme.features.authenticated.employer;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.roles.Consumer;
+import acme.entities.roles.Employer;
 import acme.framework.entities.UserAccount;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AuthenticatedConsumerRepository extends AbstractRepository {
+public interface AuthenticatedEmployerRepository extends AbstractRepository {
 
 	@Query("select ua from UserAccount ua where ua.id = ?1")
 	UserAccount findOneUserAccountById(int id);
 
-	@Query("select c from Consumer c where c.userAccount.id = ?1")
-	Consumer findOneConsumerByUserAccountId(int id);
+	@Query("select e from Employer e where e.userAccount.id = ?1")
+	Employer findOneEmployerByUserAccountId(int id);
 
 }

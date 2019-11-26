@@ -1,5 +1,5 @@
 /*
- * AuthenticatedConsumerCreateService.java
+ * AuthenticatedEmployerCreateService.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *

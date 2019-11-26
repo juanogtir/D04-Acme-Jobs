@@ -54,6 +54,7 @@ master.menu.authenticated.announcements = Anuncios
 master.menu.authenticated.challenge = Listar retos
 master.menu.authenticated.companies = Registro de empresas
 master.menu.authenticated.investor = Registros de inversores
+master.menu.authenticated.jobs = Trabajos
 
 # master.menu.administrator ###################################################
 master.menu.administrator = Administrador

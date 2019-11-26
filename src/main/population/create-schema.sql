@@ -142,7 +142,6 @@
         `reference_number` varchar(255),
         `salary_amount` double precision,
         `salary_currency` varchar(255),
-        `status` varchar(255),
         `title` varchar(255),
         `employer_id` integer not null,
         primary key (`id`)
