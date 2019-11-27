@@ -43,9 +43,21 @@
        drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
+    alter table `message` 
+       drop 
+       foreign key `FKik4epe9dp5q6uenarfyia7xin`;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
+
+    alter table `thread_message` 
+       drop 
+       foreign key `FKrjegm8cujrxgbce9n1b78xuyo`;
+
+    alter table `thread_message` 
+       drop 
+       foreign key `FKgjodhp3io8v829t92y1tdtb7u`;
 
     alter table `worker` 
        drop 
@@ -85,6 +97,8 @@
 
     drop table if exists `job`;
 
+    drop table if exists `message`;
+
     drop table if exists `non_commercial_banner`;
 
     drop table if exists `offer`;
@@ -94,6 +108,10 @@
     drop table if exists `shout`;
 
     drop table if exists `solicitud`;
+
+    drop table if exists `thread`;
+
+    drop table if exists `thread_message`;
 
     drop table if exists `user_account`;
 
