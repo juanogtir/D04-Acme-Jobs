@@ -19,76 +19,81 @@
 	<acme:form-textbox code="authenticated.thread.form.label.title" path="title" />
 	<acme:form-moment code="authenticated.thread.form.label.deadline" path="deadline" />
 	<acme:menu-separator />
-
-
-
-
+	
 	<!-- Messages -->
 	<acme:form-panel code="authenticated.thread.form.label.messages">
 
+<jstl:if test="${placeholder == null}">
+	<jstl:set var="placeholder" value=""/>	
+</jstl:if>
+
+<jstl:if test="${readonly == null}">
+	<jstl:set var="readonly" value="false"/>
+</jstl:if>
+
 		<jstl:forEach items="${messagesCollection}" var="item">
+		
+		<!-- Título -->
+<div class="form-group">
+	<label for="${item.title}">
+		<acme:message code="authenticated.thread.form.label.messages.title"/>
+	</label>		
+   	<input 
+       	value="<acme:print value="${item.title}"/>"
+       	type="text" 
+       	class="form-control"
+       	readonly
+	/>
+	<acme:form-errors path="${item.title}"/>			
+</div>
 
-			<jstl:if test="${readonly == null}">
-				<jstl:set var="readonly" value="false" />
-			</jstl:if>
+			<!-- Body -->
+<div class="form-group">
+	<label for="${item.body}">
+		<acme:message code="authenticated.thread.form.label.messages.body"/>
+	</label>		
+   	<input 
+       	value="<acme:print value="${item.body}"/>"
+       	type="text" 
+       	class="form-control"
+       	readonly
+	/>
+	<acme:form-errors path="${item.body}"/>			
+</div>
 
-			<!-- Usuario del Message 
-			<div class="form-group">
-				<label for="${item.user}"> <acme:message code="authenticated.thread.form.label.messageUser" />
-				</label> <input id="${item.user}" name="${item.user}" val-ue="<acme:print value="${item.user}"/>" type="text" class="form-control"
-					<jstl:if test="${readonly}">
-               readonly
-           </jstl:if> />
-				<acme:form-errors path="${item.user}" />
-			</div>-->
+			<!-- Tags -->
+<jstl:if test="${item.tags != null}">		
+<div class="form-group">
+	<label for="${item.tags}">
+		<acme:message code="authenticated.thread.form.label.messages.tags"/>
+	</label>		
+   	<input 
+       	value="<acme:print value="${item.tags}"/>"
+       	type="text" 
+       	class="form-control"
+       	readonly
+	/>
+	<acme:form-errors path="${item.tags}"/>			
+</div>
+</jstl:if>
 
-			<!-- Título del Message -->
-			<div class="form-group">
-				<label for="${item.title}"> <acme:message code="authenticated.thread.form.label.messageTitle" />
-				</label> <input id="${item.title}" name="${item.title}" value="<acme:print value="${item.title}"/>" type="text" class="form-control"
-					<jstl:if test="${readonly}">
-               readonly
-           </jstl:if> />
-				<acme:form-errors path="${item.title}" />
-			</div>
+			<!-- Deadline -->
+<div class="form-group">
+	<label for="${item.moment}">
+		<acme:message code="authenticated.thread.form.label.messages.moment"/>
+	</label>
+	<input 
+		value="<acme:print value="${item.moment}"/>"
+		type="text"
+		class="form-control"
+       	readonly
+	/>
+	<acme:form-errors path="${item.moment}"/>
+</div>
 
-			<!-- Fecha de creacion del Message -->
-			<div class="form-group">
-				<label for="${item.moment}"> <acme:message code="authenticated.thread.form.label.messageMoment" />
-				</label> <input id="${item.moment}" name="${item.moment}" value="<acme:print value="${item.moment}"/>" type="text" class="form-control"
-					<jstl:if test="${readonly}">
-               readonly
-           </jstl:if> />
-				<acme:form-errors path="${item.moment}" />
-			</div>
-
-			<!-- Tags del Message -->
-
-			<div class="form-group">
-				<label for="${item.tags}"> <acme:message code="authenticated.thread.form.label.messageTags" />
-				</label> <input id="${item.tags}" name="${item.tags}" val-ue="<acme:print value="${item.tags}"/>" type="text" class="form-control"
-					placeHolder="${item.tags}" <jstl:if test="${readonly}">
-               readonly
-           </jstl:if> />
-				<acme:form-errors path="${item.tags}" />
-			</div>
-
-			<!-- Cuerpo del Message -->
-			<div class="form-group">
-				<label for="${item.body}"> <acme:message code="authenticated.thread.form.label.messageBody" />
-				</label> <input id="${item.body}" name="${item.body}" val-ue="<acme:print value="${item.body}"/>" type="text" class="form-control"
-					<jstl:if test="${readonly}">
-               readonly
-           </jstl:if> />
-				<acme:form-errors path="${item.body}" />
-			</div>
-			<acme:menu-separator />
-		</jstl:forEach>
-
+	<acme:menu-separator />
+		</jstl:forEach>		
 	</acme:form-panel>
-
-
-
-
+				
 	<acme:form-return code="authenticated.thread.form.button.return" />
 </acme:form>

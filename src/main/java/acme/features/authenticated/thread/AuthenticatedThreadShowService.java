@@ -35,15 +35,14 @@ public class AuthenticatedThreadShowService implements AbstractShowService<Authe
 		assert entity != null;
 		assert model != null;
 
-		Thread result;
-		int id;
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneThreadById(id);
-		Collection<Message> messagesCollection = result.getMessages();
-
-		model.setAttribute("messagesCollection", messagesCollection);
+		//		Thread result;
+		//		int id;
+		//		id = request.getModel().getInteger("id");
+		//		result = this.repository.findOneThreadById(id);
+		Collection<Message> messagesCollection = entity.getMessages();
 
 		request.unbind(entity, model, "title", "deadline");
+		model.setAttribute("messagesCollection", messagesCollection);
 	}
 
 	@Override
@@ -55,6 +54,7 @@ public class AuthenticatedThreadShowService implements AbstractShowService<Authe
 
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneThreadById(id);
+		result.getMessages().size();
 
 		return result;
 	}
