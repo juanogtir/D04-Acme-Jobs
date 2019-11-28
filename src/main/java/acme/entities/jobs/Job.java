@@ -1,12 +1,14 @@
 
 package acme.entities.jobs;
 
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Index;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -18,6 +20,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.audits.Audit;
 import acme.entities.descriptors.Descriptor;
 import acme.entities.roles.Employer;
 import acme.framework.datatypes.Money;
@@ -73,4 +76,9 @@ public class Job extends DomainEntity {
 	@Valid
 	@OneToOne(optional = false)
 	private Descriptor			descriptor;
+
+	@NotNull
+	@Valid
+	@OneToMany
+	private Collection<Audit>	audits;
 }

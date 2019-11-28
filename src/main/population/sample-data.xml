@@ -12,9 +12,9 @@
 
 	<!-- Authenticated Users -->
 
-	<bean name="authenticatedUserAccount" class="acme.framework.entities.UserAccount">
-		<property name="username" value="authenticated" />
-		<property name="password" value="authenticated" />
+	<bean name="authenticated1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="authenticated1" />
+		<property name="password" value="authenticated1" />
 		<property name="enabled" value="true" />
 		<property name="identity">
 			<bean class="acme.datatypes.UserIdentity">
@@ -25,13 +25,57 @@
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="authenticatedAuthenticated" />
+				<ref bean="authenticated1Authenticated" />
 			</list>
 		</property>
 	</bean>
 
-	<bean name="authenticatedAuthenticated" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="authenticatedUserAccount" />
+	<bean name="authenticated1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="authenticated1UserAccount" />
+	</bean>
+
+	<bean name="authenticated2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="authenticated2" />
+		<property name="password" value="authenticated2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Authenticated2" />
+				<property name="surname" value="User2" />
+				<property name="email" value="authenticated2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="authenticated2Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="authenticated2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="authenticated2UserAccount" />
+	</bean>
+
+	<bean name="authenticated3UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="authenticated3" />
+		<property name="password" value="authenticated3" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Authenticated3" />
+				<property name="surname" value="User3" />
+				<property name="email" value="authenticated3@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="authenticated3Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="authenticated3Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="authenticated3UserAccount" />
 	</bean>
 
 	<!-- Workers -->
@@ -62,6 +106,151 @@
 
 	<bean name="worker1Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="worker1UserAccount" />
+	</bean>
+
+	<bean name="worker2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker2" />
+		<property name="password" value="worker2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="Two" />
+				<property name="email" value="worker2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="worker2Worker" />
+				<ref bean="worker2Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="worker2Worker" class="acme.entities.roles.Worker">
+		<property name="qualifications" value="Example 2 Qualifications Records" />
+		<property name="skills" value="Example 2 Skills Records" />
+		<property name="userAccount" ref="worker2UserAccount" />
+	</bean>
+
+	<bean name="worker2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="worker2UserAccount" />
+	</bean>
+
+	<bean name="worker3UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker3" />
+		<property name="password" value="worker3" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="Three" />
+				<property name="email" value="worker3@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="worker3Worker" />
+				<ref bean="worker3Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="worker3Worker" class="acme.entities.roles.Worker">
+		<property name="qualifications" value="Example 3 Qualifications Records" />
+		<property name="skills" value="Example 3 Skills Records" />
+		<property name="userAccount" ref="worker3UserAccount" />
+	</bean>
+
+	<bean name="worker3Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="worker3UserAccount" />
+	</bean>
+
+	<bean name="worker4UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker4" />
+		<property name="password" value="worker4" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="Four" />
+				<property name="email" value="worker4@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="worker4Worker" />
+				<ref bean="worker4Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="worker4Worker" class="acme.entities.roles.Worker">
+		<property name="qualifications" value="Example 4 Qualifications Records" />
+		<property name="skills" value="Example 4 Skills Records" />
+		<property name="userAccount" ref="worker4UserAccount" />
+	</bean>
+
+	<bean name="worker4Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="worker4UserAccount" />
+	</bean>
+
+	<bean name="worker5UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker5" />
+		<property name="password" value="worker5" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="Five" />
+				<property name="email" value="worker5@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="worker5Worker" />
+				<ref bean="worker5Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="worker5Worker" class="acme.entities.roles.Worker">
+		<property name="qualifications" value="Example 5 Qualifications Records" />
+		<property name="skills" value="Example 5 Skills Records" />
+		<property name="userAccount" ref="worker5UserAccount" />
+	</bean>
+
+	<bean name="worker5Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="worker5UserAccount" />
+	</bean>
+
+	<bean name="worker6UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker6" />
+		<property name="password" value="worker6" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="Six" />
+				<property name="email" value="worker6@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="worker6Worker" />
+				<ref bean="worker6Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="worker6Worker" class="acme.entities.roles.Worker">
+		<property name="qualifications" value="Example 6 Qualifications Records" />
+		<property name="skills" value="Example 6 Skills Records" />
+		<property name="userAccount" ref="worker6UserAccount" />
+	</bean>
+
+	<bean name="worker6Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="worker6UserAccount" />
 	</bean>
 
 	<!-- Employers -->
@@ -108,147 +297,137 @@
 		<property name="roles">
 			<list>
 				<ref bean="employer2Employer" />
-				<ref bean="employer1Authenticated" />
+				<ref bean="employer2Authenticated" />
 			</list>
 		</property>
 	</bean>
 
 	<bean name="employer2Employer" class="acme.entities.roles.Employer">
 		<property name="company" value="Employer 2, Inc." />
-		<property name="sector" value="Sector 3" />
+		<property name="sector" value="Sector 2" />
 		<property name="userAccount" ref="employer2UserAccount" />
 	</bean>
-	
-	<!-- Auditors -->
-	<bean name="auditor1UserAccount" class="acme.framework.entities.UserAccount">
-		<property name="username" value="auditor1" />
-		<property name="password" value="auditor1" />
+
+	<bean name="employer2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="employer2UserAccount" />
+	</bean>
+
+	<bean name="employer3UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer3" />
+		<property name="password" value="employer3" />
 		<property name="enabled" value="true" />
 		<property name="identity">
 			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Auditor" />
-				<property name="surname" value="One" />
-				<property name="email" value="auditor1@acme.com" />
+				<property name="name" value="Employer" />
+				<property name="surname" value="Three" />
+				<property name="email" value="employer3@acme.com" />
 			</bean>
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="auditor1Auditor" />
-				<ref bean="auditor1Authenticated" />
+				<ref bean="employer3Employer" />
+				<ref bean="employer3Authenticated" />
 			</list>
 		</property>
 	</bean>
-	<bean name="auditor1Auditor" class="acme.entities.roles.Auditor">
-		<property name="firm" value="Juan Noguerol Tirado (firma)" />
-		<property name="statement" value="statement 1" />
-		<property name="userAccount" ref="auditor1UserAccount" />
-	</bean>
-	<bean name="auditor1Authenticated" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="auditor1UserAccount" />
+
+	<bean name="employer3Employer" class="acme.entities.roles.Employer">
+		<property name="company" value="Employer 3, Inc." />
+		<property name="sector" value="Sector 3" />
+		<property name="userAccount" ref="employer3UserAccount" />
 	</bean>
 
-	<bean name="auditor2UserAccount" class="acme.framework.entities.UserAccount">
-		<property name="username" value="auditor2" />
-		<property name="password" value="auditor2" />
+	<bean name="employer3Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="employer3UserAccount" />
+	</bean>
+
+	<bean name="employer4UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer4" />
+		<property name="password" value="employer4" />
 		<property name="enabled" value="true" />
 		<property name="identity">
 			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Auditor" />
-				<property name="surname" value="Second" />
-				<property name="email" value="auditor2@acme.com" />
+				<property name="name" value="Employer" />
+				<property name="surname" value="Four" />
+				<property name="email" value="employer4@acme.com" />
 			</bean>
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="auditor2Auditor" />
-				<ref bean="auditor1Authenticated" />
-			</list>
-		</property>
-	</bean>
-	<bean name="auditor2Auditor" class="acme.entities.roles.Auditor">
-		<property name="firm" value="Eduardo Miguel Botía Dominguez (firma)" />
-		<property name="statement" value="statement 2" />
-		<property name="userAccount" ref="auditor2UserAccount" />
-	</bean>
-	<!-- Descriptors -->
-
-	<bean name="descriptor1Descriptor" class="acme.entities.descriptors.Descriptor">
-		<property name="description" value="Description sample of a Descriptor" />
-		<property name="duties">
-			<list>
-				<ref bean="duty1Duty" />
+				<ref bean="employer4Employer" />
+				<ref bean="employer4Authenticated" />
 			</list>
 		</property>
 	</bean>
 
-	<bean name="descriptor2Descriptor" class="acme.entities.descriptors.Descriptor">
-		<property name="description" value="Description sample of a Descriptor2" />
-		<property name="duties">
-			<list>
-				<ref bean="duty2Duty" />
-			</list>
-		</property>
-	</bean>
-	
-	<bean name="descriptor3Descriptor" class="acme.entities.descriptors.Descriptor">
-		<property name="description" value="Description sample of a Descriptor3" />
-		<property name="duties">
-			<list>
-				<ref bean="duty3Duty" />
-			</list>
-		</property>
-	</bean>
-	
-	<bean name="descriptor4Descriptor" class="acme.entities.descriptors.Descriptor">
-		<property name="description" value="Description sample of a Descriptor4" />
-		<property name="duties">
-			<list>
-				<ref bean="duty4Duty" />
-			</list>
-		</property>
-	</bean>
-	
-	<bean name="descriptor5Descriptor" class="acme.entities.descriptors.Descriptor">
-		<property name="description" value="Description sample of a Descriptor5" />
-		<property name="duties">
-			<list>
-				<ref bean="duty5Duty" />
-			</list>
-		</property>
-	</bean>
-	
-	<!-- Duties -->
-
-	<bean name="duty1Duty" class="acme.entities.duties.Duty">
-		<property name="title" value="Duty title sample" />
-		<property name="description" value="Description of a duty" />
-		<property name="timeAmount" value="6.75" />
+	<bean name="employer4Employer" class="acme.entities.roles.Employer">
+		<property name="company" value="Employer 4, Inc." />
+		<property name="sector" value="Sector 4" />
+		<property name="userAccount" ref="employer4UserAccount" />
 	</bean>
 
-	<bean name="duty2Duty" class="acme.entities.duties.Duty">
-		<property name="title" value="Duty title sample2" />
-		<property name="description" value="Description of a duty2" />
-		<property name="timeAmount" value="2.75" />
+	<bean name="employer4Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="employer4UserAccount" />
 	</bean>
-	
-	<bean name="duty3Duty" class="acme.entities.duties.Duty">
-		<property name="title" value="Duty title sample3" />
-		<property name="description" value="Description of a duty3" />
-		<property name="timeAmount" value="9.75" />
+
+	<bean name="employer5UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer5" />
+		<property name="password" value="employer5" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Employer" />
+				<property name="surname" value="Five" />
+				<property name="email" value="employer5@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="employer5Employer" />
+				<ref bean="employer5Authenticated" />
+			</list>
+		</property>
 	</bean>
-	
-	<bean name="duty4Duty" class="acme.entities.duties.Duty">
-		<property name="title" value="Duty title sample4" />
-		<property name="description" value="Description of a duty4" />
-		<property name="timeAmount" value="5.25" />
+
+	<bean name="employer5Employer" class="acme.entities.roles.Employer">
+		<property name="company" value="Employer 5, Inc." />
+		<property name="sector" value="Sector 5" />
+		<property name="userAccount" ref="employer5UserAccount" />
 	</bean>
-	
-	<bean name="duty5Duty" class="acme.entities.duties.Duty">
-		<property name="title" value="Duty title sample5" />
-		<property name="description" value="Description of a duty5" />
-		<property name="timeAmount" value="1.23" />
-	</bean>	
-  
+
+	<bean name="employer5Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="employer5UserAccount" />
+	</bean>
+
+	<bean name="employer6UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer6" />
+		<property name="password" value="employer6" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Employer" />
+				<property name="surname" value="Six" />
+				<property name="email" value="employer6@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="employer6Employer" />
+				<ref bean="employer6Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="employer6Employer" class="acme.entities.roles.Employer">
+		<property name="company" value="Employer 6, Inc." />
+		<property name="sector" value="Sector 6" />
+		<property name="userAccount" ref="employer6UserAccount" />
+	</bean>
+
+	<bean name="employer6Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="employer6UserAccount" />
+	</bean>
+
 	<!-- SHOUT'S BEANS -->
 
 	<bean id="shout01" class="acme.entities.shouts.Shout">
@@ -810,6 +989,110 @@
 		</property>
 	</bean>
 
+	<!-- Auditors -->
+	<bean name="auditor1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor1" />
+		<property name="password" value="auditor1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Auditor" />
+				<property name="surname" value="One" />
+				<property name="email" value="auditor1@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditor1Auditor" />
+				<ref bean="auditor1Authenticated" />
+			</list>
+		</property>
+	</bean>
+	<bean name="auditor1Auditor" class="acme.entities.roles.Auditor">
+		<property name="firm" value="Juan Noguerol Tirado (firma)" />
+		<property name="statement" value="statement 1" />
+		<property name="userAccount" ref="auditor1UserAccount" />
+	</bean>
+	<bean name="auditor1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="auditor1UserAccount" />
+	</bean>
+
+	<bean name="auditor2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor2" />
+		<property name="password" value="auditor2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Auditor" />
+				<property name="surname" value="Second" />
+				<property name="email" value="auditor2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditor2Auditor" />
+				<ref bean="auditor1Authenticated" />
+			</list>
+		</property>
+	</bean>
+	<bean name="auditor2Auditor" class="acme.entities.roles.Auditor">
+		<property name="firm" value="Eduardo Miguel Botía Dominguez (firma)" />
+		<property name="statement" value="statement 2" />
+		<property name="userAccount" ref="auditor2UserAccount" />
+	</bean>
+
+	<!-- Audits -->	
+	
+	<bean name="audit1" class="acme.entities.audits.Audit">
+		<property name="title" value="Title for an audit 1" />
+		<property name="finalMode" value="true" />
+		<property name="moment" value="2018/12/21 01:00" />
+		<property name="body" value="do not know either" />
+		<property name="auditor" ref="auditor1Auditor" />
+	</bean>
+	
+	<bean name="audit2" class="acme.entities.audits.Audit">
+		<property name="title" value="Title for an audit 2" />
+		<property name="finalMode" value="true" />
+		<property name="moment" value="2018/12/21 01:00" />
+		<property name="body" value="do not know either" />
+		<property name="auditor" ref="auditor1Auditor" />
+		
+	</bean>
+	
+	<bean name="audit3" class="acme.entities.audits.Audit">
+		<property name="title" value="Title for an audit 3" />
+		<property name="finalMode" value="false" />
+		<property name="moment" value="2018/12/21 01:00" />
+		<property name="body" value="do not know either" />
+		<property name="auditor" ref="auditor2Auditor" />
+		
+	</bean>
+	
+	<bean name="audit4" class="acme.entities.audits.Audit">
+		<property name="title" value="Title for an audit 4" />
+		<property name="finalMode" value="false" />
+		<property name="moment" value="2018/12/21 01:00" />
+		<property name="body" value="do not know either" />
+		<property name="auditor" ref="auditor1Auditor" />
+	</bean>
+	
+	<bean name="audit5" class="acme.entities.audits.Audit">
+		<property name="title" value="Title for an audit 5" />
+		<property name="finalMode" value="true" />
+		<property name="moment" value="2018/12/21 01:00" />
+		<property name="body" value="do not know either" />
+		<property name="auditor" ref="auditor2Auditor" />
+	</bean>
+	
+	<bean name="audit6" class="acme.entities.audits.Audit">
+		<property name="title" value="Title for an audit 5" />
+		<property name="finalMode" value="true" />
+		<property name="moment" value="2018/12/21 01:00" />
+		<property name="body" value="do not know either" />
+		<property name="auditor" ref="auditor2Auditor" />
+	</bean>
+
 	<!-- Jobs -->
 
 	<bean name="job1" class="acme.entities.jobs.Job">
@@ -821,6 +1104,11 @@
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer1Employer" />
 		<property name="descriptor" ref="descriptor1Descriptor" />
+		<property name="audits">
+			<list>
+				<ref bean="audit1" />
+			</list>
+		</property>
 	</bean>
 
 	<bean name="job2" class="acme.entities.jobs.Job">
@@ -832,8 +1120,13 @@
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer2Employer" />
 		<property name="descriptor" ref="descriptor2Descriptor" />
+		<property name="audits">
+			<list>
+				<ref bean="audit2" />
+			</list>
+		</property>
 	</bean>
-	
+
 	<bean name="job3" class="acme.entities.jobs.Job">
 		<property name="referenceNumber" value="EFPI-JOHB" />
 		<property name="title" value="Title 3" />
@@ -843,8 +1136,13 @@
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer2Employer" />
 		<property name="descriptor" ref="descriptor3Descriptor" />
+		<property name="audits">
+			<list>
+				<ref bean="audit3" />
+			</list>
+		</property>
 	</bean>
-	
+
 	<bean name="job4" class="acme.entities.jobs.Job">
 		<property name="referenceNumber" value="EFRI-JTHZ" />
 		<property name="title" value="Title 4" />
@@ -854,8 +1152,13 @@
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer1Employer" />
 		<property name="descriptor" ref="descriptor4Descriptor" />
+		<property name="audits">
+			<list>
+				<ref bean="audit4" />
+			</list>
+		</property>
 	</bean>
-	
+
 	<bean name="job5" class="acme.entities.jobs.Job">
 		<property name="referenceNumber" value="EFVI-JQHZ" />
 		<property name="title" value="Title 5" />
@@ -865,74 +1168,232 @@
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer1Employer" />
 		<property name="descriptor" ref="descriptor5Descriptor" />
-	</bean>	
-	
+		<property name="audits">
+			<list>
+				<ref bean="audit5" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="job6" class="acme.entities.jobs.Job">
+		<property name="referenceNumber" value="EFXI-JQHZ" />
+		<property name="title" value="Title 5" />
+		<property name="deadline" value="2085/04/25 06:57" />
+		<property name="salary" value="€ 14,000.00" />
+		<property name="moreInfo" value="http://www.moreinfo.com/" />
+		<property name="finalMode" value="true" />
+		<property name="employer" ref="employer4Employer" />
+		<property name="descriptor" ref="descriptor6Descriptor" />
+		<property name="audits">
+			<list>
+				<ref bean="audit6" />
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- Descriptors -->
+
+	<bean name="descriptor1Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description sample of a Descriptor" />
+		<property name="duties">
+			<list>
+				<ref bean="duty1Duty" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="descriptor2Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description sample of a Descriptor2" />
+		<property name="duties">
+			<list>
+				<ref bean="duty2Duty" />
+				<ref bean="duty3Duty" />
+				<ref bean="duty4Duty" />
+				<ref bean="duty11Duty" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="descriptor3Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description sample of a Descriptor3" />
+		<property name="duties">
+			<list>
+				<ref bean="duty7Duty" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="descriptor4Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description sample of a Descriptor4" />
+		<property name="duties">
+			<list>
+				<ref bean="duty5Duty" />
+				<ref bean="duty8Duty" />
+				<ref bean="duty10Duty" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="descriptor5Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description sample of a Descriptor5" />
+		<property name="duties">
+			<list>
+				<ref bean="duty6Duty" />
+				<ref bean="duty9Duty" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="descriptor6Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description sample of a Descriptor6" />
+		<property name="duties">
+			<list>
+				<ref bean="duty12Duty" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Duties -->
+
+	<bean name="duty1Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample" />
+		<property name="description" value="Description of a duty" />
+		<property name="timeAmount" value="60.75" />
+	</bean>
+
+	<bean name="duty2Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample2" />
+		<property name="description" value="Description of a duty2" />
+		<property name="timeAmount" value="20.75" />
+	</bean>
+
+	<bean name="duty3Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample3" />
+		<property name="description" value="Description of a duty3" />
+		<property name="timeAmount" value="9.75" />
+	</bean>
+
+	<bean name="duty4Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample4" />
+		<property name="description" value="Description of a duty4" />
+		<property name="timeAmount" value="5.25" />
+	</bean>
+
+	<bean name="duty5Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample5" />
+		<property name="description" value="Description of a duty5" />
+		<property name="timeAmount" value="10.23" />
+	</bean>
+
+	<bean name="duty6Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample6" />
+		<property name="description" value="Description of a duty6" />
+		<property name="timeAmount" value="10.1" />
+	</bean>
+
+	<bean name="duty7Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample5" />
+		<property name="description" value="Description of a duty7" />
+		<property name="timeAmount" value="70.27" />
+	</bean>
+
+	<bean name="duty8Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample8" />
+		<property name="description" value="Description of a duty8" />
+		<property name="timeAmount" value="10.80" />
+	</bean>
+
+	<bean name="duty9Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample9" />
+		<property name="description" value="Description of a duty9" />
+		<property name="timeAmount" value="20.44" />
+	</bean>
+
+	<bean name="duty10Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample10" />
+		<property name="description" value="Description of a duty10" />
+		<property name="timeAmount" value="10.23" />
+	</bean>
+
+	<bean name="duty11Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample11" />
+		<property name="description" value="Description of a duty11" />
+		<property name="timeAmount" value="81.23" />
+	</bean>
+
+	<bean name="duty12Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample12" />
+		<property name="description" value="Description of a duty12" />
+		<property name="timeAmount" value="78.23" />
+	</bean>
+
 	<!-- Application's bean -->
-	 
+
 	<bean name="application1" class="acme.entities.applications.Application">
-		<property name="reference" value="ABCD-JJJJ:WWWW"/>
-		<property name="moment" value="2019/06/10 00:00"/>
-		<property name="status" value="pending"/>
-		<property name="statement" value="This is an example 1"/>
-		<property name="skills" value="You need to have Skills Example 1"/>
-		<property name="qualifications" value="You need to have Qualifications Example 1"/>
-		<property name="worker" ref="worker1Worker"/>
-		<property name="job" ref="job1"/>
+		<property name="reference" value="ABCD-JJJJ:WWWW" />
+		<property name="moment" value="2019/06/10 00:00" />
+		<property name="status" value="pending" />
+		<property name="statement" value="This is an example 1" />
+		<property name="skills" value="You need to have Skills Example 1" />
+		<property name="qualifications" value="You need to have Qualifications Example 1" />
+		<property name="worker" ref="worker1Worker" />
+		<property name="job" ref="job1" />
 	</bean>
-	
+
 	<bean name="application2" class="acme.entities.applications.Application">
-		<property name="reference" value="EEEE-ABCD:WWWW"/>
-		<property name="moment" value="2019/06/11 00:00"/>
-		<property name="status" value="accepted"/>
-		<property name="statement" value="This is an example 2"/>
-		<property name="skills" value="You need to have Skills Example 2"/>
-		<property name="qualifications" value="You need to have Qualifications Example 2"/>
-		<property name="worker" ref="worker1Worker"/>
-		<property name="job" ref="job1"/>
+		<property name="reference" value="EEEE-ABCD:WWWW" />
+		<property name="moment" value="2019/06/11 00:00" />
+		<property name="status" value="accepted" />
+		<property name="statement" value="This is an example 2" />
+		<property name="skills" value="You need to have Skills Example 2" />
+		<property name="qualifications" value="You need to have Qualifications Example 2" />
+		<property name="worker" ref="worker1Worker" />
+		<property name="job" ref="job1" />
 	</bean>
-	
+
 	<bean name="application3" class="acme.entities.applications.Application">
-		<property name="reference" value="EEEE-JJJJ:ABCD"/>
-		<property name="moment" value="2019/07/10 00:00"/>
-		<property name="status" value="rejected"/>
-		<property name="statement" value="This is an example 3"/>
-		<property name="skills" value="You need to have Skills Example 3"/>
-		<property name="qualifications" value="You need to have Qualifications Example 3"/>
-		<property name="worker" ref="worker1Worker"/>
-		<property name="job" ref="job1"/>
+		<property name="reference" value="EEEE-JJJJ:ABCD" />
+		<property name="moment" value="2019/07/10 00:00" />
+		<property name="status" value="rejected" />
+		<property name="statement" value="This is an example 3" />
+		<property name="skills" value="You need to have Skills Example 3" />
+		<property name="qualifications" value="You need to have Qualifications Example 3" />
+		<property name="worker" ref="worker3Worker" />
+		<property name="job" ref="job2" />
 	</bean>
-	
+
 	<bean name="application4" class="acme.entities.applications.Application">
-		<property name="reference" value="abcd-jpjj:wwww"/>
-		<property name="moment" value="2018/06/10 00:00"/>
-		<property name="status" value="pending"/>
-		<property name="statement" value="This is an example 4"/>
-		<property name="skills" value="You need to have Skills Example 4"/>
-		<property name="qualifications" value="You need to have Qualifications Example 4"/>
-		<property name="worker" ref="worker1Worker"/>
-		<property name="job" ref="job2"/>
+		<property name="reference" value="abcd-jpjj:wwww" />
+		<property name="moment" value="2018/06/10 00:00" />
+		<property name="status" value="pending" />
+		<property name="statement" value="This is an example 4" />
+		<property name="skills" value="You need to have Skills Example 4" />
+		<property name="qualifications" value="You need to have Qualifications Example 4" />
+		<property name="worker" ref="worker3Worker" />
+		<property name="job" ref="job4" />
 	</bean>
-	
+
 	<bean name="application5" class="acme.entities.applications.Application">
-		<property name="reference" value="eeee-abod:wwww"/>
-		<property name="moment" value="2019/06/10 01:00"/>
-		<property name="status" value="pending"/>
-		<property name="statement" value="This is an example 5"/>
-		<property name="skills" value="You need to have Skills Example 5"/>
-		<property name="qualifications" value="You need to have Qualifications Example 5"/>
-		<property name="worker" ref="worker1Worker"/>
-		<property name="job" ref="job2"/>
+		<property name="reference" value="eeee-abod:wwww" />
+		<property name="moment" value="2019/06/10 01:00" />
+		<property name="status" value="pending" />
+		<property name="statement" value="This is an example 5" />
+		<property name="skills" value="You need to have Skills Example 5" />
+		<property name="qualifications" value="You need to have Qualifications Example 5" />
+		<property name="worker" ref="worker1Worker" />
+		<property name="job" ref="job4" />
 	</bean>
-	
+
 	<bean name="application6" class="acme.entities.applications.Application">
-		<property name="reference" value="EEEE-JJJJ:WWWW"/>
-		<property name="moment" value="2018/07/11 01:00"/>
-		<property name="status" value="accepted"/>
-		<property name="statement" value="This is an example 6"/>
-		<property name="skills" value="You need to have Skills Example 6"/>
-		<property name="qualifications" value="You need to have Qualifications Example 6"/>
-		<property name="worker" ref="worker1Worker"/>
-		<property name="job" ref="job2"/>
+		<property name="reference" value="EEEE-JJJJ:WWWW" />
+		<property name="moment" value="2018/07/11 01:00" />
+		<property name="status" value="accepted" />
+		<property name="statement" value="This is an example 6" />
+		<property name="skills" value="You need to have Skills Example 6" />
+		<property name="qualifications" value="You need to have Qualifications Example 6" />
+		<property name="worker" ref="worker5Worker" />
+		<property name="job" ref="job4" />
 	</bean>
 
 	<!-- Thread's bean -->
@@ -942,7 +1403,7 @@
 		<property name="deadline" value="2030/12/11 23:59" />
 		<property name="messages">
 			<list>
-				<ref bean="message1" />
+				<ref bean="message4" />
 			</list>
 		</property>
 	</bean>
@@ -952,6 +1413,7 @@
 		<property name="deadline" value="2030/12/11 23:59" />
 		<property name="messages">
 			<list>
+				<ref bean="message1" />
 				<ref bean="message2" />
 				<ref bean="message3" />
 			</list>
@@ -965,15 +1427,15 @@
 		<property name="moment" value="2018/12/10 01:00" />
 		<property name="tags" value="discussion,employees" />
 		<property name="body" value="what is a haiku" />
-		<property name="user" ref="authenticatedAuthenticated" />
+		<property name="user" ref="authenticated1Authenticated" />
 	</bean>
 
 	<bean name="message2" class="acme.entities.messages.Message">
 		<property name="title" value="Title for a message 2" />
 		<property name="moment" value="2018/12/20 01:00" />
 		<property name="tags" value="design,agile" />
-		<property name="body" value="what is a haiku" />
-		<property name="user" ref="authenticatedAuthenticated" />
+		<property name="body" value="it is a kind of poem" />
+		<property name="user" ref="authenticated1Authenticated" />
 	</bean>
 
 	<bean name="message3" class="acme.entities.messages.Message">
@@ -982,57 +1444,19 @@
 		<property name="tags">
 			<null />
 		</property>
-		<property name="body" value="do not know either" />
-		<property name="user" ref="authenticatedAuthenticated" />
+		<property name="body" value="I do not know how I use tags" />
+		<property name="user" ref="authenticated1Authenticated" />
 	</bean>
-	
-	<!-- Audits -->	
-	
-	<bean name="audit1" class="acme.entities.audits.Audit">
-		<property name="title" value="Title for an audit 1" />
-		<property name="finalMode" value="true" />
-		<property name="moment" value="2018/12/21 01:00" />
-		<property name="body" value="do not know either" />
-		<property name="job" ref="job1" />
-		<property name="auditor" ref="auditor1Auditor" />
+
+	<bean name="message4" class="acme.entities.messages.Message">
+		<property name="title" value="Title for a message 4" />
+		<property name="moment" value="2019/6/21 11:00" />
+		<property name="tags">
+			<null />
+		</property>
+		<property name="body" value="This is a thread for me" />
+		<property name="user" ref="authenticated2Authenticated" />
 	</bean>
-	
-	<bean name="audit2" class="acme.entities.audits.Audit">
-		<property name="title" value="Title for an audit 2" />
-		<property name="finalMode" value="true" />
-		<property name="moment" value="2018/12/21 01:00" />
-		<property name="body" value="do not know either" />
-		<property name="job" ref="job1" />
-		<property name="auditor" ref="auditor1Auditor" />
-		
-	</bean>
-	
-	<bean name="audit3" class="acme.entities.audits.Audit">
-		<property name="title" value="Title for an audit 3" />
-		<property name="finalMode" value="false" />
-		<property name="moment" value="2018/12/21 01:00" />
-		<property name="body" value="do not know either" />
-		<property name="job" ref="job2" />
-		<property name="auditor" ref="auditor2Auditor" />
-		
-	</bean>
-	
-	<bean name="audit4" class="acme.entities.audits.Audit">
-		<property name="title" value="Title for an audit 4" />
-		<property name="finalMode" value="false" />
-		<property name="moment" value="2018/12/21 01:00" />
-		<property name="body" value="do not know either" />
-		<property name="job" ref="job5" />
-		<property name="auditor" ref="auditor1Auditor" />
-	</bean>
-	
-	<bean name="audit5" class="acme.entities.audits.Audit">
-		<property name="title" value="Title for an audit 5" />
-		<property name="finalMode" value="true" />
-		<property name="moment" value="2018/12/21 01:00" />
-		<property name="body" value="do not know either" />
-		<property name="job" ref="job5" />
-		<property name="auditor" ref="auditor2Auditor" />
-	</bean>
-	
+
+
 </beans>
