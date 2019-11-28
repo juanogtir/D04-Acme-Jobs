@@ -303,7 +303,6 @@ create index IDX2qy5jkiqwk6f13kkfq8pu61le on `solicitud` (`ticker`);
 
     alter table `solicitud` 
        add constraint UK_rea5aivw0b4fiu93s509u9lky unique (`ticker`);
-create index IDXk017pcm1ix8qdgv7jpjhhrkes on `thread` (`deadline`);
 
     alter table `thread_message` 
        add constraint UK_3jtjeexb82n6qyr77gcoqr4ck unique (`messages_id`);
