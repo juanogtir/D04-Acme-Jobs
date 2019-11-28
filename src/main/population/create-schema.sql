@@ -37,6 +37,26 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `audit` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `final_mode` bit not null,
+        `moment` datetime(6),
+        `title` varchar(255),
+        `auditor_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `auditor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `firm` varchar(255),
+        `statement` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `authenticated` (
        `id` integer not null,
         `version` integer not null,
@@ -168,6 +188,11 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `job_audit` (
+       `job_id` integer not null,
+        `audits_id` integer not null
+    ) engine=InnoDB;
+
     create table `message` (
        `id` integer not null,
         `version` integer not null,
@@ -293,6 +318,9 @@ create index IDXfdmpnr8o4phmk81sqsano16r on `job` (`deadline`);
 
     alter table `job` 
        add constraint UK_bos0omdc9s5vykasqjhwaq65m unique (`reference_number`);
+
+    alter table `job_audit` 
+       add constraint UK_nkebtrjsrh57lbtm0yc7kq19h unique (`audits_id`);
 create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
 create index IDXcp4664f36sgqsd0ihmirt0w0 on `offer` (`ticker`);
 
@@ -330,6 +358,16 @@ create index IDX2qy5jkiqwk6f13kkfq8pu61le on `solicitud` (`ticker`);
        foreign key (`worker_id`) 
        references `worker` (`id`);
 
+    alter table `audit` 
+       add constraint `FK7x4vmrfrh2nyj9mwha7np1ab4` 
+       foreign key (`auditor_id`) 
+       references `auditor` (`id`);
+
+    alter table `auditor` 
+       add constraint FK_clqcq9lyspxdxcp6o4f3vkelj 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
     alter table `authenticated` 
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 
        foreign key (`user_account_id`) 
@@ -364,6 +402,16 @@ create index IDX2qy5jkiqwk6f13kkfq8pu61le on `solicitud` (`ticker`);
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
        foreign key (`employer_id`) 
        references `employer` (`id`);
+
+    alter table `job_audit` 
+       add constraint `FK2q3o4lp7bce6ig17ngxcu8gi5` 
+       foreign key (`audits_id`) 
+       references `audit` (`id`);
+
+    alter table `job_audit` 
+       add constraint `FKal6tpgdb90woj30af2npppuy` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
 
     alter table `message` 
        add constraint `FKik4epe9dp5q6uenarfyia7xin` 

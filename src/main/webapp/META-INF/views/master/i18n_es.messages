@@ -32,6 +32,7 @@ master.menu.selector.consumer = Selector de Consumidor
 master.menu.selector.provider = Selector de Proveedor
 master.menu.selector.employer = Selector de Empleador
 master.menu.selector.worker = Selector de Trabajador
+master.menu.selector.auditor = Selector de Auditor
 
 # master.menu.anonymous #######################################################
 master.menu.anonymous = Anónimo
@@ -47,6 +48,12 @@ master.menu.anonymous.companies = Registro de empresas
 master.menu.anonymous.investor = Registro de inversores
 master.menu.anonymous.top_companies = Mejores empresas
 master.menu.anonymous.top_investors = Mejores inversores
+
+
+# master.menu.auditor #######################################################
+master.menu.auditor.audit.list_mine = Trabajos auditados
+master.menu.auditor.audit.list_not_mine = Trabajos por auditar
+
 
 # master.menu.authenticated #######################################################
 master.menu.authenticated.offer = Ofertas
@@ -95,6 +102,8 @@ master.menu.employer.application.list_mine = Listar aplicaciones
 
 # master.menu.worker ##########################################################
 master.menu.employer.application.list_mine = Listar mis aplicaciones
+
+
 
 # master.menu.user-account ####################################################
 master.menu.user-account = Cuenta

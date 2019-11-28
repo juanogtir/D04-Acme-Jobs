@@ -15,6 +15,14 @@
        drop 
        foreign key `FKmbjdoxi3o93agxosoate4sxbt`;
 
+    alter table `audit` 
+       drop 
+       foreign key `FK7x4vmrfrh2nyj9mwha7np1ab4`;
+
+    alter table `auditor` 
+       drop 
+       foreign key FK_clqcq9lyspxdxcp6o4f3vkelj;
+
     alter table `authenticated` 
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
@@ -42,6 +50,14 @@
     alter table `job` 
        drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
+
+    alter table `job_audit` 
+       drop 
+       foreign key `FK2q3o4lp7bce6ig17ngxcu8gi5`;
+
+    alter table `job_audit` 
+       drop 
+       foreign key `FKal6tpgdb90woj30af2npppuy`;
 
     alter table `message` 
        drop 
@@ -71,6 +87,10 @@
 
     drop table if exists `application`;
 
+    drop table if exists `audit`;
+
+    drop table if exists `auditor`;
+
     drop table if exists `authenticated`;
 
     drop table if exists `banner`;
@@ -96,6 +116,8 @@
     drop table if exists `investor`;
 
     drop table if exists `job`;
+
+    drop table if exists `job_audit`;
 
     drop table if exists `message`;
 
