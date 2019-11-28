@@ -1041,56 +1041,62 @@
 		<property name="userAccount" ref="auditor2UserAccount" />
 	</bean>
 
-	<!-- Audits -->	
-	
+<!-- Audits -->
+
 	<bean name="audit1" class="acme.entities.audits.Audit">
 		<property name="title" value="Title for an audit 1" />
 		<property name="finalMode" value="true" />
 		<property name="moment" value="2018/12/21 01:00" />
 		<property name="body" value="do not know either" />
 		<property name="auditor" ref="auditor1Auditor" />
+		<property name="job" ref="job1" />
 	</bean>
-	
+
 	<bean name="audit2" class="acme.entities.audits.Audit">
 		<property name="title" value="Title for an audit 2" />
 		<property name="finalMode" value="true" />
 		<property name="moment" value="2018/12/21 01:00" />
 		<property name="body" value="do not know either" />
 		<property name="auditor" ref="auditor1Auditor" />
-		
+		<property name="job" ref="job1" />
+
 	</bean>
-	
+
 	<bean name="audit3" class="acme.entities.audits.Audit">
 		<property name="title" value="Title for an audit 3" />
 		<property name="finalMode" value="false" />
 		<property name="moment" value="2018/12/21 01:00" />
 		<property name="body" value="do not know either" />
 		<property name="auditor" ref="auditor2Auditor" />
-		
+		<property name="job" ref="job3" />
+
 	</bean>
-	
+
 	<bean name="audit4" class="acme.entities.audits.Audit">
 		<property name="title" value="Title for an audit 4" />
 		<property name="finalMode" value="false" />
 		<property name="moment" value="2018/12/21 01:00" />
 		<property name="body" value="do not know either" />
 		<property name="auditor" ref="auditor1Auditor" />
+		<property name="job" ref="job4" />
 	</bean>
-	
+
 	<bean name="audit5" class="acme.entities.audits.Audit">
 		<property name="title" value="Title for an audit 5" />
 		<property name="finalMode" value="true" />
 		<property name="moment" value="2018/12/21 01:00" />
 		<property name="body" value="do not know either" />
 		<property name="auditor" ref="auditor2Auditor" />
+		<property name="job" ref="job5" />
 	</bean>
-	
+
 	<bean name="audit6" class="acme.entities.audits.Audit">
 		<property name="title" value="Title for an audit 5" />
 		<property name="finalMode" value="true" />
 		<property name="moment" value="2018/12/21 01:00" />
 		<property name="body" value="do not know either" />
 		<property name="auditor" ref="auditor2Auditor" />
+		<property name="job" ref="job1" />
 	</bean>
 
 	<!-- Jobs -->

@@ -43,7 +43,7 @@ public class AuditorAuditListService implements AbstractListService<Auditor, Aud
 
 		Collection<Audit> result;
 
-		int id = request.getModel().getInteger("jobId");
+		int id = request.getModel().getInteger("id");
 		result = this.repository.findManyAuditsReferedToJob(id);
 
 		return result;
