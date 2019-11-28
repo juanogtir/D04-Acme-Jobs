@@ -356,13 +356,13 @@ Announcement
     <coordinates>
       <x>684</x>
       <y>1134</y>
-      <w>477</w>
+      <w>630</w>
       <h>144</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Offer
 --
-+ ticker: String {Unique, NotBlank, Length(11, 11))}{Pattern="^O[A-Z]{4}-[0-9]{5}$"}
++ ticker: String {Unique, NotBlank, Length(11, 11))}{Pattern="^O[A-Z]{4}-[0-9]{5}$", Placeholder=OXXXX-99999}
 + title: String {NotBlank}
 + moment: Date {Temporal(TIMESTAMP), Past}
 + deadline: Date {Temporal(TIMESTAMP), NotBlank}
@@ -374,15 +374,15 @@ Offer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>63</x>
-      <y>1152</y>
-      <w>477</w>
+      <x>36</x>
+      <y>1197</y>
+      <w>630</w>
       <h>135</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Solicitud
 --
-+ ticker: String {Unique, NotBlank, Length(11, 11))}{Pattern="^O[A-Z]{4}-[0-9]{5}$"}
++ ticker: String {Unique, NotBlank, Length(11, 11))}{Pattern="^O[A-Z]{4}-[0-9]{5}$", Placeholder=RXXXX-99999}
 + title:String {NotBlank}
 + moment: Date {Temporal(TIMESTAMP), Past}
 + deadline: Date {NotNull,Temporal(TIMESTAMP)}
@@ -516,8 +516,8 @@ threshold: Double{min=0}{max=100}{NotNull}
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>540</x>
-      <y>1125</y>
+      <x>153</x>
+      <y>1134</y>
       <w>126</w>
       <h>63</h>
     </coordinates>
