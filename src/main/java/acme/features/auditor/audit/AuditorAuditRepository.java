@@ -32,4 +32,7 @@ public interface AuditorAuditRepository extends AbstractRepository {
 	@Query("select a from Audit a")
 	Collection<Audit> findManyAll();
 
+	@Query("select a from Audit a where a.job.id = ?1")
+	Collection<Audit> findManyAuditsReferedToJob(int jobId);
+
 }

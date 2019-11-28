@@ -32,6 +32,7 @@ master.menu.selector.consumer = Consumer's Selector
 master.menu.selector.provider = Provider's Selector
 master.menu.selector.employer = Employer's Selector
 master.menu.selector.worker = Worker's Selector
+master.menu.selector.auditor = Auditor's Selector
 
 # master.menu.anonymous #######################################################
 master.menu.anonymous = Anonymous
@@ -47,6 +48,10 @@ master.menu.anonymous.companies = Company records
 master.menu.anonymous.investor = Investor records
 master.menu.anonymous.top_companies = Top company records
 master.menu.anonymous.top_investors = Top investor records
+
+# master.menu.auditor #######################################################
+master.menu.auditor.audit.list_mine = List of audited jobs
+master.menu.auditor.audit.list_not_mine = List of not audited jobs
 
 # master.menu.authenticated ###################################################
 master.menu.authenticated.offer = Offers
