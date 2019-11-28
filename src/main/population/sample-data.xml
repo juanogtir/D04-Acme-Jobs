@@ -118,7 +118,58 @@
 		<property name="sector" value="Sector 3" />
 		<property name="userAccount" ref="employer2UserAccount" />
 	</bean>
+	
+	<!-- Auditors -->
+	<bean name="auditor1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor1" />
+		<property name="password" value="auditor1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Auditor" />
+				<property name="surname" value="One" />
+				<property name="email" value="auditor1@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditor1Auditor" />
+				<ref bean="auditor1Authenticated" />
+			</list>
+		</property>
+	</bean>
+	<bean name="auditor1Auditor" class="acme.entities.roles.Auditor">
+		<property name="firm" value="Juan Noguerol Tirado (firma)" />
+		<property name="statement" value="statement 1" />
+		<property name="userAccount" ref="auditor1UserAccount" />
+	</bean>
+	<bean name="auditor1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="auditor1UserAccount" />
+	</bean>
 
+	<bean name="auditor2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor2" />
+		<property name="password" value="auditor2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Auditor" />
+				<property name="surname" value="Second" />
+				<property name="email" value="auditor2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditor2Auditor" />
+				<ref bean="auditor1Authenticated" />
+			</list>
+		</property>
+	</bean>
+	<bean name="auditor2Auditor" class="acme.entities.roles.Auditor">
+		<property name="firm" value="Eduardo Miguel Botía Dominguez (firma)" />
+		<property name="statement" value="statement 2" />
+		<property name="userAccount" ref="auditor2UserAccount" />
+	</bean>
 	<!-- Descriptors -->
 
 	<bean name="descriptor1Descriptor" class="acme.entities.descriptors.Descriptor">
@@ -934,5 +985,54 @@
 		<property name="body" value="do not know either" />
 		<property name="user" ref="authenticatedAuthenticated" />
 	</bean>
-
+	
+	<!-- Audits -->	
+	
+	<bean name="audit1" class="acme.entities.audits.Audit">
+		<property name="title" value="Title for an audit 1" />
+		<property name="finalMode" value="true" />
+		<property name="moment" value="2018/12/21 01:00" />
+		<property name="body" value="do not know either" />
+		<property name="job" ref="job1" />
+		<property name="auditor" ref="auditor1Auditor" />
+	</bean>
+	
+	<bean name="audit2" class="acme.entities.audits.Audit">
+		<property name="title" value="Title for an audit 2" />
+		<property name="finalMode" value="true" />
+		<property name="moment" value="2018/12/21 01:00" />
+		<property name="body" value="do not know either" />
+		<property name="job" ref="job1" />
+		<property name="auditor" ref="auditor1Auditor" />
+		
+	</bean>
+	
+	<bean name="audit3" class="acme.entities.audits.Audit">
+		<property name="title" value="Title for an audit 3" />
+		<property name="finalMode" value="false" />
+		<property name="moment" value="2018/12/21 01:00" />
+		<property name="body" value="do not know either" />
+		<property name="job" ref="job2" />
+		<property name="auditor" ref="auditor2Auditor" />
+		
+	</bean>
+	
+	<bean name="audit4" class="acme.entities.audits.Audit">
+		<property name="title" value="Title for an audit 4" />
+		<property name="finalMode" value="false" />
+		<property name="moment" value="2018/12/21 01:00" />
+		<property name="body" value="do not know either" />
+		<property name="job" ref="job5" />
+		<property name="auditor" ref="auditor1Auditor" />
+	</bean>
+	
+	<bean name="audit5" class="acme.entities.audits.Audit">
+		<property name="title" value="Title for an audit 5" />
+		<property name="finalMode" value="true" />
+		<property name="moment" value="2018/12/21 01:00" />
+		<property name="body" value="do not know either" />
+		<property name="job" ref="job5" />
+		<property name="auditor" ref="auditor2Auditor" />
+	</bean>
+	
 </beans>

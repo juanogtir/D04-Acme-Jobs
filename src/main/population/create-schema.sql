@@ -37,6 +37,27 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `audit` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `final_mode` bit not null,
+        `moment` datetime(6),
+        `title` varchar(255),
+        `auditor_id` integer not null,
+        `job_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `auditor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `firm` varchar(255),
+        `statement` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `authenticated` (
        `id` integer not null,
         `version` integer not null,
@@ -303,7 +324,6 @@ create index IDX2qy5jkiqwk6f13kkfq8pu61le on `solicitud` (`ticker`);
 
     alter table `solicitud` 
        add constraint UK_rea5aivw0b4fiu93s509u9lky unique (`ticker`);
-create index IDXk017pcm1ix8qdgv7jpjhhrkes on `thread` (`deadline`);
 
     alter table `thread_message` 
        add constraint UK_3jtjeexb82n6qyr77gcoqr4ck unique (`messages_id`);
@@ -330,6 +350,21 @@ create index IDXk017pcm1ix8qdgv7jpjhhrkes on `thread` (`deadline`);
        add constraint `FKmbjdoxi3o93agxosoate4sxbt` 
        foreign key (`worker_id`) 
        references `worker` (`id`);
+
+    alter table `audit` 
+       add constraint `FK7x4vmrfrh2nyj9mwha7np1ab4` 
+       foreign key (`auditor_id`) 
+       references `auditor` (`id`);
+
+    alter table `audit` 
+       add constraint `FKijp0sxquetnc9erybuvwrg2e4` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
+    alter table `auditor` 
+       add constraint FK_clqcq9lyspxdxcp6o4f3vkelj 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
 
     alter table `authenticated` 
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 
