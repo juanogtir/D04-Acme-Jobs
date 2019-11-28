@@ -69,7 +69,7 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 		model.setAttribute("dutiesCollection", dutiesCollection);
 
 		request.unbind(entity, model, "referenceNumber", "title", "deadline");
-		request.unbind(entity, model, "salary", "moreInfo", "description", "finalMode");
+		request.unbind(entity, model, "salary", "moreInfo");
 	}
 
 	@Override

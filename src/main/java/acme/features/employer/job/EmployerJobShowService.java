@@ -68,7 +68,7 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 		model.setAttribute("dutiesCollection", dutiesCollection);
 
 		request.unbind(entity, model, "referenceNumber", "title", "deadline");
-		request.unbind(entity, model, "salary", "moreInfo", "description", "finalMode");
+		request.unbind(entity, model, "salary", "moreInfo");
 	}
 
 	@Override

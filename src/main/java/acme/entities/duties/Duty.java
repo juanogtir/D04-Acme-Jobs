@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.Range;
+
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,6 +28,7 @@ public class Duty extends DomainEntity {
 	private String				description;
 
 	@NotNull
+	@Range(min = 0, max = 100, message = "Percentage must be between zero and one hundred.")
 	private Double				timeAmount;
 
 	//Derived attributes

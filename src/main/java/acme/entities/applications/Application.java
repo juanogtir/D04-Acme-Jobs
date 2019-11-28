@@ -1,5 +1,5 @@
 
-package acme.entities.application;
+package acme.entities.applications;
 
 import java.util.Date;
 
@@ -32,7 +32,7 @@ public class Application extends DomainEntity {
 	// regex EEEE-JJJJ:WWWW -> where 'E' is the employer, 'J' is the job and 'W' the worker
 	@NotBlank
 	@Length(min = 5, max = 15)
-	@Pattern(regexp = "^[a-zA-Z]{4}-[a-zA-Z]{4}([:][a-zA-Z]{4})?$")		// this is optional
+	//@Pattern(regexp = "^[a-zA-Z]{4}-[a-zA-Z]{4}([:][a-zA-Z]{4})?$")		// this is optional
 	@Column(unique = true)
 	private String				reference;
 
