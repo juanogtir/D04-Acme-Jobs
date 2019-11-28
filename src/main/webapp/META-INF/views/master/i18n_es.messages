@@ -56,6 +56,7 @@ master.menu.authenticated.challenge = Listar retos
 master.menu.authenticated.companies = Registro de empresas
 master.menu.authenticated.investor = Registros de inversores
 master.menu.authenticated.jobs = Trabajos
+master.menu.authenticated.threads = Hilos de mensajes
 
 # master.menu.administrator ###################################################
 master.menu.administrator = Administrador
