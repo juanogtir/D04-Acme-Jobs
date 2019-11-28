@@ -14,7 +14,6 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -41,12 +40,8 @@ public class Job extends DomainEntity {
 	@Column(unique = true)
 	@Length(min = 5, max = 10)
 	@NotBlank
-	@Pattern(regexp = "^([a-zA-Z]{4}[-][a-zA-Z]{4})?$")
+	//@Pattern(regexp = "^([a-zA-Z]{4}[-][a-zA-Z]{4})?$")
 	private String				referenceNumber;
-
-	@NotBlank
-	@Pattern(regexp = "^(draft)?(published)?$")
-	private String				status;
 
 	@NotBlank
 	private String				title;
@@ -58,9 +53,6 @@ public class Job extends DomainEntity {
 	@NotNull
 	@Valid
 	private Money				salary;
-
-	@NotBlank
-	private String				description;
 
 	@URL
 	private String				moreInfo;

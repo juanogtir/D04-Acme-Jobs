@@ -15,10 +15,12 @@ employer.job.form.label.deadline = Fecha límite:
 employer.job.form.label.description = Descripción:
 employer.job.form.label.salary = Salario:
 employer.job.form.label.moreInfo = Más información:
-employer.job.form.label.status = Finalizado:
 employer.job.form.label.descriptor = Descriptor:
 employer.job.form.label.descriptionDescriptor = Descripción:
 employer.job.form.label.duties = Labores:
+employer.job.form.label.dutyTitle = Título de la labor:
+employer.job.form.label.dutyDescription = Descripción de la labor:
+employer.job.form.label.dutyTimeAmount = Porcentaje de tiempo invertido en la labor por semana:
 
 employer.job.form.button.return = Volver
 

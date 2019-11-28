@@ -14,15 +14,18 @@ authenticated.job.form.label.title = Title:
 authenticated.job.form.label.deadline = Deadline:
 authenticated.job.form.label.description = Description:
 authenticated.job.form.label.salary = Salary:
-authenticated.job.form.label.moreInfo = MoreInfo:
-authenticated.job.form.label.status = Final Mode:
+authenticated.job.form.label.moreInfo = More information:
 authenticated.job.form.label.descriptor = Descriptor:
 authenticated.job.form.label.descriptionDescriptor = Description:
 authenticated.job.form.label.duties = Duties:
-
+authenticated.job.form.label.dutyTitle = Duty's title:
+authenticated.job.form.label.dutyDescription = Duty's description:
+authenticated.job.form.label.dutyTimeAmount = Percentage of the amount of time that this duty is going to take every week:
 
 authenticated.job.form.button.return = Return
 
 authenticated.job.list.label.referenceNumber = Reference
 authenticated.job.list.label.title = Title
 authenticated.job.list.label.deadline = Deadline
+
+

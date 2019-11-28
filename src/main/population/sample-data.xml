@@ -139,6 +139,33 @@
 		</property>
 	</bean>
 	
+	<bean name="descriptor3Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description sample of a Descriptor3" />
+		<property name="duties">
+			<list>
+				<ref bean="duty3Duty" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="descriptor4Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description sample of a Descriptor4" />
+		<property name="duties">
+			<list>
+				<ref bean="duty4Duty" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="descriptor5Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description sample of a Descriptor5" />
+		<property name="duties">
+			<list>
+				<ref bean="duty5Duty" />
+			</list>
+		</property>
+	</bean>
+	
 	<!-- Duties -->
 
 	<bean name="duty1Duty" class="acme.entities.duties.Duty">
@@ -153,6 +180,23 @@
 		<property name="timeAmount" value="2.75" />
 	</bean>
 	
+	<bean name="duty3Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample3" />
+		<property name="description" value="Description of a duty3" />
+		<property name="timeAmount" value="9.75" />
+	</bean>
+	
+	<bean name="duty4Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample4" />
+		<property name="description" value="Description of a duty4" />
+		<property name="timeAmount" value="5.25" />
+	</bean>
+	
+	<bean name="duty5Duty" class="acme.entities.duties.Duty">
+		<property name="title" value="Duty title sample5" />
+		<property name="description" value="Description of a duty5" />
+		<property name="timeAmount" value="1.23" />
+	</bean>	
 	<!-- SHOUT'S BEANS -->
 
 	<bean id="shout01" class="acme.entities.shouts.Shout">
@@ -718,11 +762,9 @@
 
 	<bean name="job1" class="acme.entities.jobs.Job">
 		<property name="referenceNumber" value="EMPI-JOBA" />
-		<property name="status" value="published" />
 		<property name="title" value="Title 1" />
 		<property name="deadline" value="2030/12/11 23:59" />
 		<property name="salary" value="€ 15,000.98" />
-		<property name="description" value="what is a haiku" />
 		<property name="moreInfo" value="http://www.moreinfo.com/" />
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer1Employer" />
@@ -731,20 +773,51 @@
 	
 	<bean name="job2" class="acme.entities.jobs.Job">
 		<property name="referenceNumber" value="EMPI-JOBB" />
-		<property name="status" value="draft" />
 		<property name="title" value="Title 2" />
 		<property name="deadline" value="2030/12/11 23:59" />
 		<property name="salary" value="€ 20,000.00" />
-		<property name="description" value="what is a haiku" />
 		<property name="moreInfo" value="http://www.moreinfo.com/" />
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer2Employer" />
 		<property name="descriptor" ref="descriptor2Descriptor" />
 	</bean>
 	
+	<bean name="job3" class="acme.entities.jobs.Job">
+		<property name="referenceNumber" value="EFPI-JOHB" />
+		<property name="title" value="Title 3" />
+		<property name="deadline" value="2023/10/10 20:51" />
+		<property name="salary" value="€ 31,000.00" />
+		<property name="moreInfo" value="http://www.moreinfo.com/" />
+		<property name="finalMode" value="true" />
+		<property name="employer" ref="employer2Employer" />
+		<property name="descriptor" ref="descriptor3Descriptor" />
+	</bean>
+	
+	<bean name="job4" class="acme.entities.jobs.Job">
+		<property name="referenceNumber" value="EFRI-JTHZ" />
+		<property name="title" value="Title 4" />
+		<property name="deadline" value="2024/11/06 10:34" />
+		<property name="salary" value="€ 16,000.00" />
+		<property name="moreInfo" value="http://www.moreinfo.com/" />
+		<property name="finalMode" value="true" />
+		<property name="employer" ref="employer1Employer" />
+		<property name="descriptor" ref="descriptor4Descriptor" />
+	</bean>
+	
+	<bean name="job5" class="acme.entities.jobs.Job">
+		<property name="referenceNumber" value="EFVI-JQHZ" />
+		<property name="title" value="Title 5" />
+		<property name="deadline" value="2085/04/25 06:57" />
+		<property name="salary" value="€ 14,000.00" />
+		<property name="moreInfo" value="http://www.moreinfo.com/" />
+		<property name="finalMode" value="true" />
+		<property name="employer" ref="employer1Employer" />
+		<property name="descriptor" ref="descriptor5Descriptor" />
+	</bean>	
+	
 	<!-- Application's bean -->
 	 
-	<bean name="application1" class="acme.entities.application.Application">
+	<bean name="application1" class="acme.entities.applications.Application">
 		<property name="reference" value="ABCD-JJJJ:WWWW"/>
 		<property name="moment" value="2019/06/10 00:00"/>
 		<property name="status" value="pending"/>
@@ -755,7 +828,7 @@
 		<property name="job" ref="job1"/>
 	</bean>
 	
-	<bean name="application2" class="acme.entities.application.Application">
+	<bean name="application2" class="acme.entities.applications.Application">
 		<property name="reference" value="EEEE-ABCD:WWWW"/>
 		<property name="moment" value="2019/06/11 00:00"/>
 		<property name="status" value="accepted"/>
@@ -766,7 +839,7 @@
 		<property name="job" ref="job1"/>
 	</bean>
 	
-	<bean name="application3" class="acme.entities.application.Application">
+	<bean name="application3" class="acme.entities.applications.Application">
 		<property name="reference" value="EEEE-JJJJ:ABCD"/>
 		<property name="moment" value="2019/07/10 00:00"/>
 		<property name="status" value="rejected"/>
@@ -777,7 +850,7 @@
 		<property name="job" ref="job1"/>
 	</bean>
 	
-	<bean name="application4" class="acme.entities.application.Application">
+	<bean name="application4" class="acme.entities.applications.Application">
 		<property name="reference" value="abcd-jpjj:wwww"/>
 		<property name="moment" value="2018/06/10 00:00"/>
 		<property name="status" value="pending"/>
@@ -788,7 +861,7 @@
 		<property name="job" ref="job2"/>
 	</bean>
 	
-	<bean name="application5" class="acme.entities.application.Application">
+	<bean name="application5" class="acme.entities.applications.Application">
 		<property name="reference" value="eeee-abod:wwww"/>
 		<property name="moment" value="2019/06/10 01:00"/>
 		<property name="status" value="pending"/>
@@ -799,7 +872,7 @@
 		<property name="job" ref="job2"/>
 	</bean>
 	
-	<bean name="application6" class="acme.entities.application.Application">
+	<bean name="application6" class="acme.entities.applications.Application">
 		<property name="reference" value="EEEE-JJJJ:WWWW"/>
 		<property name="moment" value="2018/07/11 01:00"/>
 		<property name="status" value="accepted"/>

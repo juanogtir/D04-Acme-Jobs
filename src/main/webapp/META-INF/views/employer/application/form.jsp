@@ -16,9 +16,21 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="employer.application.form.label.reference" path="reference"/>
+	<acme:form-textbox code="employer.application.form.label.reference" path="reference" placeholder="EEEE-JJJJ:WWWW"/>
 	<acme:form-moment code="employer.application.form.label.moment" path="moment"/>
-	<acme:form-textbox code="employer.application.form.label.status" path="status"/>
+
+	<jstl:if test="${command== 'show' || command== 'update' || command== 'delete'}">
+		<acme:form-textbox code="employer.application.form.label.status" path="status" placeholder="pending, accepted, rejected"/>
+	</jstl:if>
+	
+	<jstl:if test="${command== 'create'}">
+		<acme:form-select code="employer.application.form.label.status" path="status">
+		<acme:form-option code="employer.application.form.label.status.pending" value="pending"/>
+		<acme:form-option code="employer.application.form.label.status.rejected" value="rejected"/>
+		<acme:form-option code="employer.application.form.label.status.accepted" value="accepted" selected="true"/>
+	</acme:form-select>
+	</jstl:if>
+	
 	<acme:form-textarea code="employer.application.form.label.statement" path="statement"/>
 	<acme:form-textarea code="employer.application.form.label.skills" path="skills"/>
 	<acme:form-textarea code="employer.application.form.label.qualifications" path="qualifications"/>

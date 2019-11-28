@@ -14,11 +14,14 @@ employer.job.form.label.title = Title:
 employer.job.form.label.deadline = Deadline:
 employer.job.form.label.description = Description:
 employer.job.form.label.salary = Salary:
-employer.job.form.label.moreInfo = MoreInfo:
-employer.job.form.label.status = Final Mode:
+employer.job.form.label.moreInfo = More information:
 employer.job.form.label.descriptor = Descriptor:
 employer.job.form.label.descriptionDescriptor = Description:
 employer.job.form.label.duties = Duties:
+employer.job.form.label.dutyTitle = Duty's title:
+employer.job.form.label.dutyDescription = Duty's description:
+employer.job.form.label.dutyTimeAmount = Percentage of amount of time that this duty is going to take every week:
+
 
 employer.job.form.button.return = Return
 

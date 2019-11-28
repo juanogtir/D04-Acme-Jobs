@@ -15,10 +15,12 @@ authenticated.job.form.label.deadline = Fecha límite:
 authenticated.job.form.label.description = Descripción:
 authenticated.job.form.label.salary = Salario:
 authenticated.job.form.label.moreInfo = Más información:
-authenticated.job.form.label.status = Finalizado:
 authenticated.job.form.label.descriptor = Descriptor:
 authenticated.job.form.label.descriptionDescriptor = Descripción:
 authenticated.job.form.label.duties = Labores:
+authenticated.job.form.label.dutyTitle = Título de la labor:
+authenticated.job.form.label.dutyDescription = Descripción de la labor:
+authenticated.job.form.label.dutyTimeAmount = Porcentaje de tiempo invertido en la labor por semana:
 
 authenticated.job.form.button.return = Volver
 
