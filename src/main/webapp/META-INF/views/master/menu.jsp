@@ -57,7 +57,9 @@
 			<acme:menu-suboption code="master.menu.authenticated.companies" action="/authenticated/company/list" access="isAuthenticated()" />
 			<!-- Jobs -->
 			<acme:menu-suboption code="master.menu.authenticated.jobs" action="/authenticated/job/list" access="isAuthenticated()" />
-			
+			<!--Threads-->
+			<acme:menu-suboption code="master.menu.authenticated.threads" action="/authenticated/thread/list" access="isAuthenticated()" />
+
 		</acme:menu-option>
 
 		<!--Administrator's Selector-->
@@ -68,7 +70,8 @@
 			<acme:menu-suboption code="master.menu.administrator.create_announcements" action="/administrator/announcement/create"
 				access="hasRole('Administrator')" />
 			<!-- Spam -->
-			<acme:menu-suboption code="master.menu.administrator.customization" action="/administrator/customization/list" access="hasRole('Administrator')" />
+			<acme:menu-suboption code="master.menu.administrator.customization" action="/administrator/customization/list"
+				access="hasRole('Administrator')" />
 			<!-- Dashboard -->
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"
 				access="hasRole('Administrator')" />
@@ -98,36 +101,37 @@
 			<acme:menu-suboption code="master.menu.administrator.create_nonCommercialBanner"
 				action="/administrator/non-commercial-banner/create" access="hasRole('Administrator')" />
 		</acme:menu-option>
-		
+
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list" />
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />
 		</acme:menu-option>
-		
+
 		<!--Consumer's Selector-->
 		<acme:menu-option code="master.menu.selector.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.create_offer" action="/consumer/offer/create" access="hasRole('Consumer')" />
 		</acme:menu-option>
-		
+
 		<!--Provider's Selector-->
 		<acme:menu-option code="master.menu.selector.provider" access="hasRole('Provider')">
 			<!--<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/" />
 			<acme:menu-suboption code="master.menu.provider.list_solicitud" action="/provider/solicitud/list" />-->
 			<acme:menu-suboption code="master.menu.provider.create_solicitud" action="/provider/solicitud/create" />
 		</acme:menu-option>
-		
+
 		<!--Employer's Selector-->
 		<acme:menu-option code="master.menu.selector.employer" access="hasRole('Employer')">
 			<acme:menu-suboption code="master.menu.employer.job.list_mine" action="/employer/job/list_mine" />
 			<acme:menu-suboption code="master.menu.employer.application.list_mine" action="/employer/application/list_mine" />
 		</acme:menu-option>
-			
+
+		<!--Worker's Selector-->
 		<acme:menu-option code="master.menu.selector.worker" access="hasRole('Worker')">
 			<acme:menu-suboption code="master.menu.employer.application.list_mine" action="/worker/application/list_mine" />
 		</acme:menu-option>
 
-		 
+
 	</acme:menu-left>
 
 	<acme:menu-right>
