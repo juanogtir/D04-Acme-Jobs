@@ -16,7 +16,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="provider.solicitud.form.label.ticker" path="ticker"/>
+	<acme:form-textbox code="provider.solicitud.form.label.ticker" path="ticker" placeholder="RXXXX-99999"/>
 	<acme:form-textbox code="provider.solicitud.form.label.title" path="title"/>
 	<acme:form-moment code="provider.solicitud.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="provider.solicitud.form.label.text" path="text"/>

@@ -61,7 +61,7 @@ master.menu.authenticated.challenge = List challenges
 master.menu.authenticated.companies = Company records
 master.menu.authenticated.investor = Investor records
 master.menu.authenticated.jobs = Jobs
-master.menu.authenticated.threads = Threads
+master.menu.authenticated.threads = List my threads
 
 # master.menu.administrator ###################################################
 master.menu.administrator = Administrator

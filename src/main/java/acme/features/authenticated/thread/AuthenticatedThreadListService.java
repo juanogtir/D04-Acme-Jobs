@@ -10,6 +10,7 @@ import acme.entities.threads.Thread;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -41,17 +42,10 @@ public class AuthenticatedThreadListService implements AbstractListService<Authe
 	public Collection<Thread> findMany(final Request<Thread> request) {
 		assert request != null;
 
-		/*
-		 * Thread size;
-		 * int id;
-		 * id = request.getModel().getInteger("id");
-		 * size = this.repository.findOneThreadById(id);
-		 * size.getMessages().size();
-		 */
-
 		Collection<Thread> result;
 
-		result = this.repository.findManyAll();
+		Principal principal = request.getPrincipal();
+		result = this.repository.findManyByThreadId(principal.getActiveRoleId());
 
 		return result;
 	}
