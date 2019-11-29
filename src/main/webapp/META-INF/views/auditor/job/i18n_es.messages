@@ -21,6 +21,7 @@ auditor.job.form.label.duties = Labores:
 auditor.job.form.label.dutyTitle = Título de la labor:
 auditor.job.form.label.dutyDescription = Descripción de la labor:
 auditor.job.form.label.dutyTimeAmount = Porcentaje de tiempo invertido en la labor por semana:
+auditor.job.form.button.auditList = Lista de audiciones
 
 auditor.job.form.button.return = Volver
 

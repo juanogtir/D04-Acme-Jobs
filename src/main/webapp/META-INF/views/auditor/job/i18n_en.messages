@@ -21,6 +21,7 @@ auditor.job.form.label.duties = Duties:
 auditor.job.form.label.dutyTitle = Duty's title:
 auditor.job.form.label.dutyDescription = Duty's description:
 auditor.job.form.label.dutyTimeAmount = Percentage of amount of time that this duty is going to take every week:
+auditor.job.form.button.auditList = Audit list
 
 
 auditor.job.form.button.return = Return

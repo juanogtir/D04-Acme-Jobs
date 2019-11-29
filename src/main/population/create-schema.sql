@@ -45,6 +45,7 @@
         `moment` datetime(6),
         `title` varchar(255),
         `auditor_id` integer not null,
+        `job_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -362,6 +363,11 @@ create index IDX2qy5jkiqwk6f13kkfq8pu61le on `solicitud` (`ticker`);
        add constraint `FK7x4vmrfrh2nyj9mwha7np1ab4` 
        foreign key (`auditor_id`) 
        references `auditor` (`id`);
+
+    alter table `audit` 
+       add constraint `FKijp0sxquetnc9erybuvwrg2e4` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
 
     alter table `auditor` 
        add constraint FK_clqcq9lyspxdxcp6o4f3vkelj 

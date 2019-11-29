@@ -19,6 +19,10 @@
        drop 
        foreign key `FK7x4vmrfrh2nyj9mwha7np1ab4`;
 
+    alter table `audit` 
+       drop 
+       foreign key `FKijp0sxquetnc9erybuvwrg2e4`;
+
     alter table `auditor` 
        drop 
        foreign key FK_clqcq9lyspxdxcp6o4f3vkelj;

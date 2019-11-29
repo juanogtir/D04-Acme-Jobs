@@ -21,6 +21,7 @@ authenticated.job.form.label.duties = Labores:
 authenticated.job.form.label.dutyTitle = Título de la labor:
 authenticated.job.form.label.dutyDescription = Descripción de la labor:
 authenticated.job.form.label.dutyTimeAmount = Porcentaje de tiempo invertido en la labor por semana:
+authenticated.job.form.button.auditList = Lista de audiciones
 
 authenticated.job.form.button.return = Volver
 
