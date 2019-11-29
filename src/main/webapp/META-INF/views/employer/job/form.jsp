@@ -98,6 +98,7 @@
 	</jstl:forEach>
 	</acme:form-panel>
 	
+	<acme:form-return code="employer.job.form.button.auditList" action="${auditList}"/>
 
 	<acme:form-return code="employer.job.form.button.return" />
 </acme:form>

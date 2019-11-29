@@ -21,6 +21,7 @@ authenticated.job.form.label.duties = Duties:
 authenticated.job.form.label.dutyTitle = Duty's title:
 authenticated.job.form.label.dutyDescription = Duty's description:
 authenticated.job.form.label.dutyTimeAmount = Percentage of the amount of time that this duty is going to take every week:
+authenticated.job.form.button.auditList = Audit list
 
 authenticated.job.form.button.return = Return
 

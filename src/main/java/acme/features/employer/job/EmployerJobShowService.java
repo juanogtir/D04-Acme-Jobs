@@ -48,6 +48,9 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 		assert entity != null;
 		assert model != null;
 
+		String direccion = "../audit/list?id=" + entity.getId();
+		model.setAttribute("auditList", direccion);
+
 		String descriptionDescriptor;
 		descriptionDescriptor = entity.getDescriptor().getDescription();
 		model.setAttribute("descriptionDescriptor", descriptionDescriptor);
