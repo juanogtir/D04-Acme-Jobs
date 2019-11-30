@@ -71,6 +71,7 @@
         `picture` varchar(255),
         `slogan` varchar(255),
         `url` varchar(255),
+        `sponsor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -98,6 +99,7 @@
         `picture` varchar(255),
         `slogan` varchar(255),
         `url` varchar(255),
+        `sponsor_id` integer not null,
         `credit_card` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -211,6 +213,7 @@
         `picture` varchar(255),
         `slogan` varchar(255),
         `url` varchar(255),
+        `sponsor_id` integer not null,
         `jingle` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -258,6 +261,15 @@
         `text` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `sponsor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `credit_card` varchar(255),
+        `organization` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -379,6 +391,16 @@ create index IDX2qy5jkiqwk6f13kkfq8pu61le on `solicitud` (`ticker`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `banner` 
+       add constraint `FKjoxwdnjr54soq3j89kt3fgrtj` 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
+
+    alter table `commercial_banner` 
+       add constraint FK_q9id3wc65gg49afc5tlr1c00n 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
+
     alter table `consumer` 
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
@@ -424,8 +446,18 @@ create index IDX2qy5jkiqwk6f13kkfq8pu61le on `solicitud` (`ticker`);
        foreign key (`user_id`) 
        references `authenticated` (`id`);
 
+    alter table `non_commercial_banner` 
+       add constraint FK_2l8gpcwh19e7jj513or4r9dvb 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
+
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `sponsor` 
+       add constraint FK_20xk0ev32hlg96kqynl6laie2 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
