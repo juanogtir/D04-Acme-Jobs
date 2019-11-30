@@ -131,6 +131,11 @@
 			<acme:menu-suboption code="master.menu.employer.application.list_mine" action="/worker/application/list_mine" />
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.selector.sponsor" access="hasRole('Sponsor')">
+			<acme:menu-suboption code="master.menu.sponsor.comercial_banner.list_mine" action="/sponsor/commercial-banner/list_mine" />
+			<acme:menu-suboption code="master.menu.sponsor.non_comercial_banner.list_mine" action="/sponsor/non-commercial-banner/list_mine" />
+		</acme:menu-option>
+		
 		<!--Auditor's Selector-->
 		<acme:menu-option code="master.menu.selector.auditor" access="hasRole('Auditor')">
 			<acme:menu-suboption code="master.menu.auditor.audit.list_mine" action="/auditor/job/list_mine" />

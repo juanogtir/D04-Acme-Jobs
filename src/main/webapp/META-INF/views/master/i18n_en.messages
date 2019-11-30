@@ -33,6 +33,7 @@ master.menu.selector.provider = Provider's Selector
 master.menu.selector.employer = Employer's Selector
 master.menu.selector.worker = Worker's Selector
 master.menu.selector.auditor = Auditor's Selector
+master.menu.selector.sponsor = Sponsor's Selector
 
 # master.menu.anonymous #######################################################
 master.menu.anonymous = Anonymous
@@ -100,6 +101,10 @@ master.menu.employer.application.list_mine = List applications
 
 # master.menu.worker ##########################################################
 master.menu.employer.application.list_mine = List my applications
+
+# master.menu.sponsor #########################################################
+master.menu.sponsor.comercial_banner.list_mine = List my Commercial Banners
+master.menu.sponsor.non_comercial_banner.list_mine = List my Non Commercial Baners
 
 # master.menu.user-account ####################################################
 master.menu.user-account = Account
