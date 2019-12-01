@@ -427,6 +427,124 @@
 	<bean name="employer6Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="employer6UserAccount" />
 	</bean>
+	
+	<!-- SPONSOR'S BEANS -->
+	
+	<bean name="sponsor1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor1" />
+		<property name="password" value="sponsor1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor" />
+				<property name="surname" value="One" />
+				<property name="email" value="sponsor1@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsor1Sponsor" />
+				<ref bean="sponsor1Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="sponsor1Sponsor" class="acme.entities.roles.Sponsor">
+		<property name="organization" value="Acme organization 1" />
+		<property name="creditCard" value="4111111111111111" />
+		<property name="userAccount" ref="sponsor1UserAccount" />
+	</bean>
+
+	<bean name="sponsor1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsor1UserAccount" />
+	</bean>
+	
+	<bean name="sponsor2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor2" />
+		<property name="password" value="sponsor2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor" />
+				<property name="surname" value="Two" />
+				<property name="email" value="sponsor2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsor2Sponsor" />
+				<ref bean="sponsor2Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="sponsor2Sponsor" class="acme.entities.roles.Sponsor">
+		<property name="organization" value="Acme organization 2" />
+		<property name="creditCard"><null/></property>
+		<property name="userAccount" ref="sponsor2UserAccount" />
+	</bean>
+
+	<bean name="sponsor2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsor2UserAccount" />
+	</bean>
+	
+	<bean name="sponsor3UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor3" />
+		<property name="password" value="sponsor3" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor" />
+				<property name="surname" value="Three" />
+				<property name="email" value="sponsor3@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsor3Sponsor" />
+				<ref bean="sponsor3Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="sponsor3Sponsor" class="acme.entities.roles.Sponsor">
+		<property name="organization" value="Acme organization 3" />
+		<property name="creditCard" value="6011000000000004" />
+		<property name="userAccount" ref="sponsor3UserAccount" />
+	</bean>
+
+	<bean name="sponsor3Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsor3UserAccount" />
+	</bean>
+	
+	<bean name="sponsor4UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor4" />
+		<property name="password" value="sponsor4" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor" />
+				<property name="surname" value="Four" />
+				<property name="email" value="sponsor4@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsor4Sponsor" />
+				<ref bean="sponsor4Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="sponsor4Sponsor" class="acme.entities.roles.Sponsor">
+		<property name="organization" value="Acme organization 4" />
+		<property name="creditCard" value="5500000000000004" />
+		<property name="userAccount" ref="sponsor4UserAccount" />
+	</bean>
+
+	<bean name="sponsor4Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsor4UserAccount" />
+	</bean>
 
 	<!-- SHOUT'S BEANS -->
 
@@ -892,44 +1010,51 @@
 		<property name="picture" value="http://piezaapieza.net/wp-content/uploads/2016/11/EDU84131.01.jpg" />
 		<property name="slogan" value="Edu Mig" />
 		<property name="url" value="https://www.atptour.com/" />
-		<property name="creditCard" value="4793823612819522" />
+		<property name="creditCard" value="4111111111111111" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
 	<bean id="commercialBanner02" class="acme.entities.commercialBanners.CommercialBanner">
 		<property name="picture"
 			value="https://s3.eestatic.com/2019/09/23/ciencia/Otono-Ciencia_431466954_134482819_1024x576.jpg" />
 		<property name="slogan" value="The autum in Spain " />
 		<property name="url" value="https://www.elperiodico.com/es/sociedad/20190918/otono-2019-equinoccio-dia-hora-7639468" />
-		<property name="creditCard" value="4126673159904486" />
+		<property name="creditCard" value="4111111111111111" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
 	<bean id="commercialBanner03" class="acme.entities.commercialBanners.CommercialBanner">
 		<property name="picture" value="http://piezaapieza.net/wp-content/uploads/2016/11/EDU84131.01.jpg" />
 		<property name="slogan" value="Work as anyone" />
 		<property name="url" value="https://www.atptour.com/" />
-		<property name="creditCard" value="4552748942901537" />
+		<property name="creditCard" value="4111111111111111" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
 	<bean id="commercialBanner04" class="acme.entities.commercialBanners.CommercialBanner">
 		<property name="picture" value="http://datos.jpg" />
 		<property name="slogan" value="repeticion1!" />
 		<property name="url" value="https://estosondatosparaiterar.com/" />
-		<property name="creditCard" value="4552748942901537" />
+		<property name="creditCard" value="4111111111111111" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
 	<bean id="commercialBanner05" class="acme.entities.commercialBanners.CommercialBanner">
 		<property name="picture" value="http://piezaapieza.net/wp-content/uploads/2016/11/EDU84131.01.jpg" />
 		<property name="slogan" value="repeticion2!" />
 		<property name="url" value="https://www.atptour.com/" />
-		<property name="creditCard" value="4552748942901537" />
+		<property name="creditCard" value="5500000000000004" />
+		<property name="sponsor" ref="sponsor4Sponsor" />
 	</bean>
 	<bean id="commercialBanner06" class="acme.entities.commercialBanners.CommercialBanner">
 		<property name="picture" value="http://piezaapieza.net/wp-content/uploads/2016/11/EDU84131.01.jpg" />
 		<property name="slogan" value="repeticion3!" />
 		<property name="url" value="https://www.atptour.com/" />
-		<property name="creditCard" value="4552748942901537" />
+		<property name="creditCard" value="5500000000000004" />
+		<property name="sponsor" ref="sponsor4Sponsor" />
 	</bean>
 	<bean id="commercialBanner07" class="acme.entities.commercialBanners.CommercialBanner">
 		<property name="picture" value="http://piezaapieza.net/wp-content/uploads/2016/11/EDU84131.01.jpg" />
 		<property name="slogan" value="repeticion4!" />
 		<property name="url" value="https://www.atptour.com/" />
-		<property name="creditCard" value="4552748942901537" />
+		<property name="creditCard" value="5500000000000004" />
+		<property name="sponsor" ref="sponsor4Sponsor" />
 	</bean>
 
 	<!-- Non-commercial Banner's bean -->
@@ -939,6 +1064,7 @@
 		<property name="slogan" value="Conocimiento es poder" />
 		<property name="url" value="https://neoattack.com/" />
 		<property name="jingle" value="https://neoattack.com/" />
+		<property name="sponsor" ref="sponsor2Sponsor" />
 	</bean>
 	<bean id="nonCommercialBanner02" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
 		<property name="picture" value="https://media.istockphoto.com/illustrations/wind-icon-illustration-id912304034" />
@@ -947,6 +1073,7 @@
 		<property name="jingle">
 			<null />
 		</property>
+		<property name="sponsor" ref="sponsor2Sponsor" />
 	</bean>
 	<bean id="nonCommercialBanner03" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
 		<property name="picture" value="http://expertolaboralonline.jpg" />
@@ -955,6 +1082,7 @@
 		<property name="jingle">
 			<null />
 		</property>
+		<property name="sponsor" ref="sponsor2Sponsor" />
 	</bean>
 	<bean id="nonCommercialBanner04" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
 		<property name="picture" value="http://masdatos.jpg" />
@@ -963,6 +1091,7 @@
 		<property name="jingle">
 			<null />
 		</property>
+		<property name="sponsor" ref="sponsor2Sponsor" />
 	</bean>
 	<bean id="nonCommercialBanner05" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
 		<property name="picture" value="http://iteracion.jpg" />
@@ -971,6 +1100,7 @@
 		<property name="jingle">
 			<null />
 		</property>
+		<property name="sponsor" ref="sponsor4Sponsor" />
 	</bean>
 	<bean id="nonCommercialBanner06" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
 		<property name="picture" value="http://otroejemplo.jpg" />
@@ -979,6 +1109,7 @@
 		<property name="jingle">
 			<null />
 		</property>
+		<property name="sponsor" ref="sponsor4Sponsor" />
 	</bean>
 	<bean id="nonCommercialBanner07" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
 		<property name="picture" value="http://estamosañadiendodatosparaiterar.jpg" />
@@ -987,6 +1118,7 @@
 		<property name="jingle">
 			<null />
 		</property>
+		<property name="sponsor" ref="sponsor4Sponsor" />
 	</bean>
 
 	<!-- Auditors -->
