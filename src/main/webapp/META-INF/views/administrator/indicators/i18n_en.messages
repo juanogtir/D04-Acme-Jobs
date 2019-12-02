@@ -14,6 +14,7 @@ administrator.indicators.form.label.averageJobsPerEmployer = Average of jobs per
 administrator.indicators.form.label.averageApplicationsPerEmployer = Average applications per employer:
 administrator.indicators.form.label.averageApplicationsPerWorker = Average applications per worker:
 
-administrator.indicators.form.label.chart = Chart of ratios
+administrator.indicators.form.label.chart1 = Chart of Jobs
+administrator.indicators.form.label.chart2 = Chart of Application
 
 administrator.indicators.form.button.return = Return

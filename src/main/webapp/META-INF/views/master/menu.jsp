@@ -64,6 +64,12 @@
 
 		<!--Administrator's Selector-->
 		<acme:menu-option code="master.menu.selector.administrator" access="hasRole('Administrator')">
+			<!-- Dashboard -->
+			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"
+				access="hasRole('Administrator')" />
+			<!-- Indicators -->
+			<acme:menu-suboption code="master.menu.administrator.indicators" action="/administrator/indicators/show"
+				access="hasRole('Administrator')" />
 			<!-- Announcements -->
 			<acme:menu-suboption code="master.menu.administrator.list_announcements" action="/administrator/announcement/list"
 				access="hasRole('Administrator')" />
@@ -71,9 +77,6 @@
 				access="hasRole('Administrator')" />
 			<!-- Spam -->
 			<acme:menu-suboption code="master.menu.administrator.customization" action="/administrator/customization/list"
-				access="hasRole('Administrator')" />
-			<!-- Dashboard -->
-			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"
 				access="hasRole('Administrator')" />
 			<!--Challenge-->
 			<acme:menu-suboption code="master.menu.administrator.list_challenge" action="/administrator/challenge/list"

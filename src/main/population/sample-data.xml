@@ -1239,7 +1239,7 @@
 		<property name="deadline" value="2030/12/11 23:59" />
 		<property name="salary" value="€ 15,000.98" />
 		<property name="moreInfo" value="http://www.moreinfo.com/" />
-		<property name="finalMode" value="true" />
+		<property name="finalMode" value="false" />
 		<property name="employer" ref="employer1Employer" />
 		<property name="descriptor" ref="descriptor1Descriptor" />
 		<property name="audits">
@@ -1287,7 +1287,7 @@
 		<property name="deadline" value="2024/11/06 10:34" />
 		<property name="salary" value="€ 16,000.00" />
 		<property name="moreInfo" value="http://www.moreinfo.com/" />
-		<property name="finalMode" value="true" />
+		<property name="finalMode" value="false" />
 		<property name="employer" ref="employer1Employer" />
 		<property name="descriptor" ref="descriptor4Descriptor" />
 		<property name="audits">

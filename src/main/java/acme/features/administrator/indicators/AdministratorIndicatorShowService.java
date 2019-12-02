@@ -29,7 +29,7 @@ public class AdministratorIndicatorShowService implements AbstractShowService<Ad
 		assert request != null;
 		assert request != null;
 
-		request.unbind(entity, model, "averageJobsPerEmployer", "averageApplicationsPerEmployer", "averageApplicationsPerWorker", "ratioAcceptedApplications", "ratioPendingApplications", "ratioRejectedApplications");
+		request.unbind(entity, model, "averageJobsPerEmployer", "averageApplicationsPerEmployer", "averageApplicationsPerWorker", "ratioAcceptedApplications", "ratioPendingApplications", "ratioRejectedApplications", "ratioPublishedJobs", "ratioDraftJobs");
 
 	}
 
@@ -45,9 +45,8 @@ public class AdministratorIndicatorShowService implements AbstractShowService<Ad
 		result.setRatioAcceptedApplications(this.repository.ratioAcceptedApplications());
 		result.setRatioPendingApplications(this.repository.ratioPendingApplications());
 		result.setRatioRejectedApplications(this.repository.ratioRejectedApplications());
-		result.setRatioAcceptedJobs(this.repository.ratioAcceptedJobs());
-		result.setRatioPendingJobs(this.repository.ratioPendingJobs());
-		result.setRatioRejectedJobs(this.repository.ratioRejectedJobs());
+		result.setRatioPublishedJobs(this.repository.ratioPublishedJobs());
+		result.setRatioDraftJobs(this.repository.ratioDraftJobs());
 
 		return result;
 	}
