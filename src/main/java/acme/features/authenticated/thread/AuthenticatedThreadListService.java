@@ -45,7 +45,7 @@ public class AuthenticatedThreadListService implements AbstractListService<Authe
 		Collection<Thread> result;
 
 		Principal principal = request.getPrincipal();
-		result = this.repository.findManyByThreadId(principal.getActiveRoleId());
+		result = this.repository.findManyByUserId(principal.getActiveRoleId());
 
 		return result;
 	}

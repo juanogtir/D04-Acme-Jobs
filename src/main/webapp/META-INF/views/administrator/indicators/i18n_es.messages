@@ -14,7 +14,7 @@ administrator.indicators.form.label.averageJobsPerEmployer = Media de trabajos p
 administrator.indicators.form.label.averageApplicationsPerEmployer = Media de aplicaciones por empleador
 administrator.indicators.form.label.averageApplicationsPerWorker = Media de aplicaciones por trabajador
 
-administrator.indicators.form.label.chart1 = Gráficas de Trabajos
-administrator.indicators.form.label.chart2 = Gráficas de Aplicación
+administrator.indicators.form.label.chart1 = Gráfica de Trabajos
+administrator.indicators.form.label.chart2 = Gráfica de Aplicación
 
 administrator.indicators.form.button.return = Volver

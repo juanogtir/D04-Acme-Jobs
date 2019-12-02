@@ -74,6 +74,7 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.customization = Customization
 master.menu.administrator.dashboard = Panel de estadísticas
+master.menu.administrator.indicators = Panel de Indicadores
 master.menu.administrator.list_challenge = Listar retos
 master.menu.administrator.create_challenge = Crear un reto
 master.menu.administrator.charts = Gráficas de estadísticas

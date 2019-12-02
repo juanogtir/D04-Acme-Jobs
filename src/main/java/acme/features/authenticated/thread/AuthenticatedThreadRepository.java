@@ -30,5 +30,5 @@ public interface AuthenticatedThreadRepository extends AbstractRepository {
 	Collection<Thread> findManyAll();
 
 	@Query("select t from Thread t where exists (select m from Message m where m.user.id = ?1)")
-	Collection<Thread> findManyByThreadId(int id);
+	Collection<Thread> findManyByUserId(int id);
 }
