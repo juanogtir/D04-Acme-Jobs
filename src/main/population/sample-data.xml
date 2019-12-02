@@ -1314,8 +1314,8 @@
 	</bean>
 
 	<bean name="job6" class="acme.entities.jobs.Job">
-		<property name="referenceNumber" value="EFXI-JQHZ" />
-		<property name="title" value="Title 5" />
+		<property name="referenceNumber" value="EFEE-JQHZ" />
+		<property name="title" value="Title 6" />
 		<property name="deadline" value="2085/04/25 06:57" />
 		<property name="salary" value="€ 14,000.00" />
 		<property name="moreInfo" value="http://www.moreinfo.com/" />
@@ -1328,7 +1328,6 @@
 			</list>
 		</property>
 	</bean>
-
 
 	<!-- Descriptors -->
 
@@ -1519,7 +1518,13 @@
 		<property name="statement" value="This is an example 5" />
 		<property name="skills" value="You need to have Skills Example 5" />
 		<property name="qualifications" value="You need to have Qualifications Example 5" />
-		<property name="worker" ref="worker1Worker" />
+		<property name="worker" >
+			<list>
+				<ref bean="worker1Worker" />	
+				<ref bean="worker3Worker" />
+				<ref bean="worker5Worker" />
+			</list>
+		</property>
 		<property name="job" ref="job4" />
 	</bean>
 
@@ -1530,8 +1535,44 @@
 		<property name="statement" value="This is an example 6" />
 		<property name="skills" value="You need to have Skills Example 6" />
 		<property name="qualifications" value="You need to have Qualifications Example 6" />
-		<property name="worker" ref="worker5Worker" />
-		<property name="job" ref="job4" />
+		<property name="worker" >
+			<list>
+				<ref bean="worker1Worker" />	
+				<ref bean="worker3Worker" />
+			</list>
+		</property>
+		<property name="job" ref="job3" />
+	</bean>
+	
+	<bean name="application7" class="acme.entities.applications.Application">
+		<property name="reference" value="FFFF-JJJJ:WWWW" />
+		<property name="moment" value="2018/07/11 01:00" />
+		<property name="status" value="accepted" />
+		<property name="statement" value="This is an example 7" />
+		<property name="skills" value="You need to have Skills Example 7" />
+		<property name="qualifications" value="You need to have Qualifications Example 7" />
+		<property name="worker" >
+			<list>
+				<ref bean="worker1Worker" />	
+			</list>
+		</property>
+		<property name="job" ref="job2" />
+	</bean>
+	
+	<bean name="application8" class="acme.entities.applications.Application">
+		<property name="reference" value="GGGG-JJJJ:WWWW" />
+		<property name="moment" value="2018/07/11 01:00" />
+		<property name="status" value="accepted" />
+		<property name="statement" value="This is an example 8" />
+		<property name="skills" value="You need to have Skills Example 8" />
+		<property name="qualifications" value="You need to have Qualifications Example 8" />
+		<property name="worker" >
+			<list>
+				<ref bean="worker1Worker" />	
+				<ref bean="worker3Worker" />
+			</list>
+		</property>
+		<property name="job" ref="job1" />
 	</bean>
 
 	<!-- Thread's bean -->

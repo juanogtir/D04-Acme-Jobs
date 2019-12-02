@@ -45,7 +45,7 @@
         `moment` datetime(6),
         `title` varchar(255),
         `auditor_id` integer not null,
-        `job_id` integer not null,
+        `job_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
