@@ -27,8 +27,7 @@ public class Indicators implements Serializable {
 	Double						ratioRejectedApplications;
 
 	// Ratio of jobs grouped by status
-	Double						ratioPendingJobs;
-	Double						ratioAcceptedJobs;
-	Double						ratioRejectedJobs;
+	Double						ratioPublishedJobs;
+	Double						ratioDraftJobs;
 
 }

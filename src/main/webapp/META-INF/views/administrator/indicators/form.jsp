@@ -28,6 +28,106 @@
 		<acme:form-double code="administrator.indicators.form.label.averageApplicationsPerWorker" path="averageApplicationsPerWorker"/>
 	</acme:form-panel>
 	
+	<!-- Listing indicators -->
+	<h2>
+		<acme:message code="administrator.indicators.form.label.chart1"/>
+	</h2>	
+	
+	<div>
+		<canvas id="canvas1"></canvas>
+	</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var data = {
+				labels : ["PUBLISHED","DRAFT"],
+				datasets : [
+					{
+						label: 'Jobs',
+						data : [
+							<jstl:out value="${ratioPublishedJobs}"/>,
+							<jstl:out value="${ratioDraftJobs}"/>,
+						],
+						backgroundColor : 'LightSkyBlue'
+						
+					},
+				]
+			};
+			var options = {
+				scales : {
+					yAxes : [
+						{
+							ticks : {
+								suggestedMin : 0.0,
+								suggestedMax : 1.0
+							}
+						}
+					]
+				}
+			};
+			var canvas,context;
+			canvas = document.getElementById("canvas1");
+			context = canvas.getContext("2d");
+			new Chart(context, {
+				type : "bar",
+				data : data,
+				options : options
+			});
+			
+		});
+	</script>
+	
+	<!-- Chart Application -->
+	<h2>
+		<acme:message code="administrator.indicators.form.label.chart2"/>
+	</h2>	
+	
+	<div>
+		<canvas id="canvas2"></canvas>
+	</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var data = {
+				labels : ["PENDING","ACCEPTED","REJECTED"],
+				datasets : [
+					{
+						label: 'Applications',
+						data : [
+							<jstl:out value="${ratioPendingApplications}"/>,
+							<jstl:out value="${ratioAcceptedApplications}"/>,
+							<jstl:out value="${ratioRejectedApplications}"/>,
+						],
+						backgroundColor : 'LightSkyBlue'
+						
+					},
+				]
+			};
+			var options = {
+				scales : {
+					yAxes : [
+						{
+							ticks : {
+								suggestedMin : 0.0,
+								suggestedMax : 1.0
+							}
+						}
+					]
+				}
+			};
+			var canvas,context;
+			canvas = document.getElementById("canvas2");
+			context = canvas.getContext("2d");
+			new Chart(context, {
+				type : "bar",
+				data : data,
+				options : options
+			});
+			
+		});
+	</script>
+	
+	<!--
 	<h2>
 		<acme:message code="administrator.indicators.form.label.chart"/>
 	</h2>	
@@ -85,7 +185,7 @@
 			
 		});
 	</script>
-	
+	-->
   	<acme:form-return code="administrator.indicators.form.button.return"/>
 </acme:form>
 

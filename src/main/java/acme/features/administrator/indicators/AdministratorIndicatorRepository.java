@@ -27,13 +27,10 @@ public interface AdministratorIndicatorRepository extends AbstractRepository {
 	@Query("select 1.0 * count(a) / (select count(b) from Application b) from Application a where a.status = 'rejected'")
 	Double ratioRejectedApplications();
 
-	@Query("select 1.0 * count(j) / (select count(ja) from Job ja) from Job j where exists(select a from Application a where a.job.id = j.id and a.status = 'pending')")
-	Double ratioPendingJobs();
+	@Query("select 1.0 * count(a) / (select count(b) from Job b) from Job a where a.finalMode = '1'")
+	Double ratioPublishedJobs();
 
-	@Query("select 1.0 * count(j) / (select count(ja) from Job ja) from Job j where exists(select a from Application a where a.job.id = j.id and a.status = 'accepted')")
-	Double ratioAcceptedJobs();
-
-	@Query("select 1.0 * count(j) / (select count(ja) from Job ja) from Job j where exists(select a from Application a where a.job.id = j.id and a.status = 'rejected')")
-	Double ratioRejectedJobs();
+	@Query("select 1.0 * count(a) / (select count(b) from Job b) from Job a where a.finalMode = '0'")
+	Double ratioDraftJobs();
 
 }
