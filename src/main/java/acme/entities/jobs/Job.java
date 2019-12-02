@@ -77,7 +77,6 @@ public class Job extends DomainEntity {
 	@OneToOne(optional = false)
 	private Descriptor			descriptor;
 
-	@NotNull
 	@Valid
 	@OneToMany
 	private Collection<Audit>	audits;

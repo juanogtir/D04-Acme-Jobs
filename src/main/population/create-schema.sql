@@ -313,6 +313,7 @@
 
     insert into `hibernate_sequence` values ( 1 );
 create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
+create index IDX2q2747fhp099wkn3j2yt05fhs on `application` (`status`);
 
     alter table `application` 
        add constraint UK_ct7r18vvxl5g4c4k7aefpa4do unique (`reference`);
@@ -325,6 +326,7 @@ create index IDXbm7mwffwxwiukjmbmt9t1qnnu on `company` (`sector`);
 create index IDXq1q335kxox0leg1u9hhndvue1 on `investor` (`stars`);
 create index IDX1slmmcr1g0wv9jbgun6rny0oy on `investor` (`sector`);
 create index IDXfdmpnr8o4phmk81sqsano16r on `job` (`deadline`);
+create index IDXt84ibbldao4ngscmvo7ja0es on `job` (`final_mode`);
 
     alter table `job` 
        add constraint UK_qpodqtu8nvqkof3olnqnqcv2l unique (`descriptor_id`);

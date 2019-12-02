@@ -428,6 +428,35 @@
 		<property name="userAccount" ref="employer6UserAccount" />
 	</bean>
 	
+		<bean name="employer7UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer7" />
+		<property name="password" value="employer7" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Employer" />
+				<property name="surname" value="Seven" />
+				<property name="email" value="employer7@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="employer7Employer" />
+				<ref bean="employer7Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="employer7Employer" class="acme.entities.roles.Employer">
+		<property name="company" value="Employer 7, Inc." />
+		<property name="sector" value="Sector 7" />
+		<property name="userAccount" ref="employer7UserAccount" />
+	</bean>
+
+	<bean name="employer7Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="employer7UserAccount" />
+	</bean>
+	
 	<!-- SPONSOR'S BEANS -->
 	
 	<bean name="sponsor1UserAccount" class="acme.framework.entities.UserAccount">
@@ -1532,6 +1561,37 @@
 		<property name="qualifications" value="You need to have Qualifications Example 6" />
 		<property name="worker" ref="worker5Worker" />
 		<property name="job" ref="job4" />
+	</bean>
+
+		<bean name="application7" class="acme.entities.applications.Application">
+		<property name="reference" value="FFFF-JJJJ:WWWW" />
+		<property name="moment" value="2018/07/11 01:00" />
+		<property name="status" value="accepted" />
+		<property name="statement" value="This is an example 7" />
+		<property name="skills" value="You need to have Skills Example 7" />
+		<property name="qualifications" value="You need to have Qualifications Example 7" />
+		<property name="worker" >
+			<list>
+				<ref bean="worker1Worker" />	
+			</list>
+		</property>
+		<property name="job" ref="job2" />
+	</bean>
+	
+	<bean name="application8" class="acme.entities.applications.Application">
+		<property name="reference" value="GGGG-JJJJ:WWWW" />
+		<property name="moment" value="2018/07/11 01:00" />
+		<property name="status" value="accepted" />
+		<property name="statement" value="This is an example 8" />
+		<property name="skills" value="You need to have Skills Example 8" />
+		<property name="qualifications" value="You need to have Qualifications Example 8" />
+		<property name="worker" >
+			<list>
+				<ref bean="worker1Worker" />	
+				<ref bean="worker3Worker" />
+			</list>
+		</property>
+		<property name="job" ref="job1" />
 	</bean>
 
 	<!-- Thread's bean -->
