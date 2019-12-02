@@ -20,9 +20,6 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-//@Table(indexes = {
-//	@Index(columnList = "deadline")
-//})
 public class Message extends DomainEntity {
 
 	// Serialisation identifier
