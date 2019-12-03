@@ -4,7 +4,9 @@ package acme.entities.audits;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Index;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -21,6 +23,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(indexes = {
+	@Index(columnList = "job_id"), @Index(columnList = "finalMode")
+})
 public class Audit extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
@@ -28,7 +33,6 @@ public class Audit extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	@NotNull
 	private boolean				finalMode;
 
 	@NotNull

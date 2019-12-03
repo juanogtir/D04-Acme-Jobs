@@ -17,5 +17,6 @@ authenticated.audit.form.label.moment = Moment
 authenticated.audit.form.label.body = Body
 authenticated.audit.form.label.job = Job
 authenticated.audit.form.label.auditor = Auditor
+authenticated.audit.form.label.associatedJob = Associated Job
 
 authenticated.job.form.button.return = Return

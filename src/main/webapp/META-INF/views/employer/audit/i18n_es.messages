@@ -17,5 +17,6 @@ employer.audit.form.label.moment = Fecha
 employer.audit.form.label.body = Cuerpo
 employer.audit.form.label.job = Trabajo
 employer.audit.form.label.auditor = Auditor
+employer.audit.form.label.associatedJob = Trabajo auditado
 
 employer.job.form.button.return = Volver

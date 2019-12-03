@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.audits.Audit;
+import acme.entities.jobs.Job;
 import acme.entities.roles.Auditor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -43,6 +44,9 @@ public class AuthenticatedAuditShowService implements AbstractShowService<Authen
 		int id;
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneAuditById(id);
+
+		Job associatedJob = result.getJob();
+		model.setAttribute("associatedJob", associatedJob.getReferenceNumber());
 
 		Auditor auditor = result.getAuditor();
 		model.setAttribute("auditor", auditor.getUserAccount().getUsername());
