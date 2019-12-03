@@ -191,11 +191,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `job_audit` (
-       `job_id` integer not null,
-        `audits_id` integer not null
-    ) engine=InnoDB;
-
     create table `message` (
        `id` integer not null,
         `version` integer not null,
@@ -325,15 +320,14 @@ create index IDXbm7mwffwxwiukjmbmt9t1qnnu on `company` (`sector`);
        add constraint UK_kvr5rclgwa51d625rmx13ke96 unique (`duties_id`);
 create index IDXq1q335kxox0leg1u9hhndvue1 on `investor` (`stars`);
 create index IDX1slmmcr1g0wv9jbgun6rny0oy on `investor` (`sector`);
+create index IDXfdmpnr8o4phmk81sqsano16r on `job` (`deadline`);
+create index IDXt84ibbldao4ngscmvo7ja0es on `job` (`final_mode`);
 
     alter table `job` 
        add constraint UK_qpodqtu8nvqkof3olnqnqcv2l unique (`descriptor_id`);
 
     alter table `job` 
        add constraint UK_bos0omdc9s5vykasqjhwaq65m unique (`reference_number`);
-
-    alter table `job_audit` 
-       add constraint UK_nkebtrjsrh57lbtm0yc7kq19h unique (`audits_id`);
 create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
 create index IDXcp4664f36sgqsd0ihmirt0w0 on `offer` (`ticker`);
 
@@ -430,16 +424,6 @@ create index IDX2qy5jkiqwk6f13kkfq8pu61le on `solicitud` (`ticker`);
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
        foreign key (`employer_id`) 
        references `employer` (`id`);
-
-    alter table `job_audit` 
-       add constraint `FK2q3o4lp7bce6ig17ngxcu8gi5` 
-       foreign key (`audits_id`) 
-       references `audit` (`id`);
-
-    alter table `job_audit` 
-       add constraint `FKal6tpgdb90woj30af2npppuy` 
-       foreign key (`job_id`) 
-       references `job` (`id`);
 
     alter table `message` 
        add constraint `FKik4epe9dp5q6uenarfyia7xin` 

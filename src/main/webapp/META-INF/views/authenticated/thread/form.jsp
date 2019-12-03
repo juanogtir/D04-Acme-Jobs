@@ -33,6 +33,20 @@
 
 		<jstl:forEach items="${messagesCollection}" var="item">
 		
+				<!-- Autor -->
+<div class="form-group">
+	<label for="${item.user.userAccount.username}">
+		<acme:message code="authenticated.thread.form.label.messages.author"/>
+	</label>		
+   	<input 
+       	value="<acme:print value="${item.user.userAccount.username}"/>"
+       	type="text" 
+       	class="form-control"
+       	readonly
+	/>
+	<acme:form-errors path="${item.user.userAccount.username}"/>			
+</div>
+		
 		<!-- Título -->
 <div class="form-group">
 	<label for="${item.title}">

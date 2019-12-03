@@ -6,9 +6,11 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Index;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -29,12 +31,11 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-/*
- * @Table(indexes = {
- * 
- * @Index(columnList = "deadline"), @Index(columnList = "finalMode")
- * })
- */
+
+@Table(indexes = {
+	@Index(columnList = "deadline"), @Index(columnList = "finalMode"), @Index(columnList = "employer_id")
+})
+
 public class Job extends DomainEntity {
 
 	// Serialisation identifier
@@ -61,7 +62,6 @@ public class Job extends DomainEntity {
 	@URL
 	private String				moreInfo;
 
-	@NotNull
 	private boolean				finalMode;
 
 	//Derived attributes
@@ -79,6 +79,6 @@ public class Job extends DomainEntity {
 	private Descriptor			descriptor;
 
 	@Valid
-	@OneToMany
+	@OneToMany(mappedBy = "job")
 	private Collection<Audit>	audits;
 }

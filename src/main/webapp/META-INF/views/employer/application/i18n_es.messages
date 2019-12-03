@@ -12,6 +12,8 @@ employer.application.list.label.reference = Número de Referencia
 employer.application.list.label.moment = Momento
 employer.application.list.label.status = Estado
 
+employer.application.form.label.JobEmployer = Empleador del trabajo
+employer.application.form.label.referenceJob = Trabajo correspondiente
 employer.application.form.label.reference = Número de Referencia
 employer.application.form.label.moment = Momento
 employer.application.form.label.status = Estado

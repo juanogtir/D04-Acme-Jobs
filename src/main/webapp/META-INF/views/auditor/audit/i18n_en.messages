@@ -17,6 +17,7 @@ auditor.audit.form.label.moment = Moment
 auditor.audit.form.label.body = Body
 auditor.audit.form.label.job = Job
 auditor.audit.form.label.auditor = Auditor
+auditor.audit.form.label.associatedJob = Associated Job
 
-
-auditor.audit.form.buttom.return = Return
+auditor.audit.form.button.return = Return
+auditor.audit.list.button.return = Return

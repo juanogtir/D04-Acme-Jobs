@@ -21,13 +21,6 @@ import acme.framework.repositories.AbstractRepository;
 
 @Repository
 public interface AdministratorDashboardRepository extends AbstractRepository {
-	/*
-	 * @Query("select a from Announcement a where a.id = ?1")
-	 * Announcement findOneById(int id);
-	 *
-	 * @Query("select a from Announcement a")
-	 * Collection<Announcement> findManyAll();
-	 */
 
 	@Query("select count(a) from Announcement a")
 	Integer countAnnouncements();
@@ -73,5 +66,31 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 
 	@Query("select count(ir), ir.sector from Investor ir group by ir.sector order by ir.sector")
 	Collection<Object[]> getNumInvestorBySector();
+
+	//Fourth deliverable queries
+
+	@Query("select avg(select count(j) from Job j where j.employer.id = e.id) from Employer e")
+	Double averageJobsPerEmployer();
+
+	@Query("select avg(select count(a) from Application a where a.worker.id = w.id) from Worker w")
+	Double averageApplicationsPerWorker();
+
+	@Query("select avg(select count(a) from Application a where exists(select j from Job j where j.employer.id = e.id and a.job.id = j.id)) from Employer e")
+	Double averageApplicationsPerEmployer();
+
+	@Query("select 1.0 * count(a) / (select count(b) from Application b) from Application a where a.status = 'pending'")
+	Double ratioPendingApplications();
+
+	@Query("select 1.0 * count(a) / (select count(b) from Application b) from Application a where a.status = 'accepted'")
+	Double ratioAcceptedApplications();
+
+	@Query("select 1.0 * count(a) / (select count(b) from Application b) from Application a where a.status = 'rejected'")
+	Double ratioRejectedApplications();
+
+	@Query("select 1.0 * count(a) / (select count(b) from Job b) from Job a where a.finalMode = 1")
+	Double ratioPublishedJobs();
+
+	@Query("select 1.0 * count(a) / (select count(b) from Job b) from Job a where a.finalMode = 0")
+	Double ratioDraftJobs();
 
 }

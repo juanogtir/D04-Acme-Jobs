@@ -19,7 +19,11 @@
 <acme:list>
 	<acme:list-column code="employer.audit.list.label.title" path="title" width="20%"/>
 	<acme:list-column code="employer.audit.list.label.moment" path="moment" width="20%"/>
-	
+	<acme:form-return code="employer.job.form.button.return" />
 </acme:list>
+<acme:form>
+<acme:form-return code="employer.job.form.button.return" />
+</acme:form>
+
 
 

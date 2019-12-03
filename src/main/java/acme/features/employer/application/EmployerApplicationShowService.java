@@ -43,6 +43,11 @@ public class EmployerApplicationShowService implements AbstractShowService<Emplo
 		assert entity != null;
 		assert model != null;
 
+		String referenceJob = entity.getJob().getReferenceNumber();
+		model.setAttribute("referenceJob", referenceJob);
+		String JobAuthor = entity.getJob().getEmployer().getUserAccount().getUsername();
+		model.setAttribute("JobEmployer", JobAuthor);
+
 		request.unbind(entity, model, "reference", "moment", "status");
 		request.unbind(entity, model, "statement", "skills", "qualifications");
 	}

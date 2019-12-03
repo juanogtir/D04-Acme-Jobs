@@ -10,6 +10,17 @@
 
 #administrator.announcement.form.label.title = Title:
 
+administrator.dashboard.form.label.listdashboard = List dashboard
+
+administrator.dashboard.form.label.averageJobsPerEmployer = Average of jobs per employer:
+administrator.dashboard.form.label.averageApplicationsPerEmployer = Average applications per employer:
+administrator.dashboard.form.label.averageApplicationsPerWorker = Average applications per worker:
+
+administrator.dashboard.form.label.chart1 = Chart of Jobs
+administrator.dashboard.form.label.chart2 = Chart of Application
+
+administrator.dashboard.form.button.return = Return
+
 administrator.dashboard.form.label.rewardInformation = Information about rewards
 administrator.dashboard.form.label.offerInformation = Information about offers
 

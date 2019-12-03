@@ -8,6 +8,17 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+administrator.dashboard.form.label.listdashboard = Listar indicadores
+
+administrator.dashboard.form.label.averageJobsPerEmployer = Media de trabajos por empleador
+administrator.dashboard.form.label.averageApplicationsPerEmployer = Media de aplicaciones por empleador
+administrator.dashboard.form.label.averageApplicationsPerWorker = Media de aplicaciones por trabajador
+
+administrator.dashboard.form.label.chart1 = Gráfica de Trabajos
+administrator.dashboard.form.label.chart2 = Gráfica de Aplicación
+
+administrator.dashboard.form.button.return = Volver
+
 administrator.dashboard.form.label.rewardInformation = Información sobre recompensas
 administrator.dashboard.form.label.offerInformation = Información sobre ofertas
 

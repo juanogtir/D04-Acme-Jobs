@@ -17,6 +17,8 @@
 
 <acme:form>
 	<acme:form-textbox code="employer.application.form.label.reference" path="reference" placeholder="EEEE-JJJJ:WWWW"/>
+		<acme:form-textbox code="employer.application.form.label.referenceJob" path="referenceJob"/>
+		<acme:form-textbox code="employer.application.form.label.JobEmployer" path="JobEmployer"/>
 	<acme:form-moment code="employer.application.form.label.moment" path="moment"/>
 
 	<jstl:if test="${command== 'show' || command== 'update' || command== 'delete'}">

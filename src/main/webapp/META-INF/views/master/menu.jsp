@@ -67,9 +67,6 @@
 			<!-- Dashboard -->
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"
 				access="hasRole('Administrator')" />
-			<!-- Indicators -->
-			<acme:menu-suboption code="master.menu.administrator.indicators" action="/administrator/indicators/show"
-				access="hasRole('Administrator')" />
 			<!-- Announcements -->
 			<acme:menu-suboption code="master.menu.administrator.list_announcements" action="/administrator/announcement/list"
 				access="hasRole('Administrator')" />

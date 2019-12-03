@@ -21,5 +21,6 @@
 	<acme:form-moment code="authenticated.audit.form.label.moment" path="moment"/>
 	<acme:form-textarea code="authenticated.audit.form.label.body" path="body"/>
 	<acme:form-textbox code="authenticated.audit.form.label.auditor" path="auditor"/>
+	<acme:form-textbox code="authenticated.audit.form.label.associatedJob" path="associatedJob"/>
   	<acme:form-return code="authenticated.job.form.button.return" />
 </acme:form>
