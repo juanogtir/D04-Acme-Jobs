@@ -325,8 +325,6 @@ create index IDXbm7mwffwxwiukjmbmt9t1qnnu on `company` (`sector`);
        add constraint UK_kvr5rclgwa51d625rmx13ke96 unique (`duties_id`);
 create index IDXq1q335kxox0leg1u9hhndvue1 on `investor` (`stars`);
 create index IDX1slmmcr1g0wv9jbgun6rny0oy on `investor` (`sector`);
-create index IDXfdmpnr8o4phmk81sqsano16r on `job` (`deadline`);
-create index IDXt84ibbldao4ngscmvo7ja0es on `job` (`final_mode`);
 
     alter table `job` 
        add constraint UK_qpodqtu8nvqkof3olnqnqcv2l unique (`descriptor_id`);
