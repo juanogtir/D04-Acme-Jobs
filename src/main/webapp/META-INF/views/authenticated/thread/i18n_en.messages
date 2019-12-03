@@ -8,9 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+authenticated.thread.form.label.messages.author = Author:
 authenticated.thread.form.label.title = Title:
 authenticated.thread.form.label.deadline = Deadline:
-authenticated.thread.form.label.messages = Messages:
+authenticated.thread.form.label.messages = Messages
 authenticated.thread.form.label.messages.title = Message title:
 authenticated.thread.form.label.messages.tags = Message tags:
 authenticated.thread.form.label.messages.body = Message body:

@@ -63,14 +63,6 @@
        drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
-    alter table `job_audit` 
-       drop 
-       foreign key `FK2q3o4lp7bce6ig17ngxcu8gi5`;
-
-    alter table `job_audit` 
-       drop 
-       foreign key `FKal6tpgdb90woj30af2npppuy`;
-
     alter table `message` 
        drop 
        foreign key `FKik4epe9dp5q6uenarfyia7xin`;
@@ -136,8 +128,6 @@
     drop table if exists `investor`;
 
     drop table if exists `job`;
-
-    drop table if exists `job_audit`;
 
     drop table if exists `message`;
 

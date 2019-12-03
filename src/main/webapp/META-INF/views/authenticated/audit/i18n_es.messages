@@ -17,3 +17,5 @@ authenticated.audit.form.label.moment = Fecha
 authenticated.audit.form.label.body = Cuerpo
 authenticated.audit.form.label.job = Trabajo
 authenticated.audit.form.label.auditor = Auditor
+
+authenticated.job.form.button.return = Volver

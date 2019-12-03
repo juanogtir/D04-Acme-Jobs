@@ -38,6 +38,24 @@ public class Dashboard implements Serializable {
 	List<String>				investorSectors;
 	List<Long>					numberInvestors; //nº investors per sector
 
+	// List Attributes ----------------------------------------------------------
+	Double						averageJobsPerEmployer;
+	Double						averageApplicationsPerEmployer;
+	Double						averageApplicationsPerWorker;
+
+	// Chart Attributes ---------------------------------------------------------
+
+	//List<String>				status;
+
+	// Ratio of applications grouped by status
+	Double						ratioAcceptedApplications;
+	Double						ratioPendingApplications;
+	Double						ratioRejectedApplications;
+
+	// Ratio of jobs grouped by status
+	Double						ratioPublishedJobs;
+	Double						ratioDraftJobs;
+
 	// Derived attributes -------------------------------------------------
 
 	// Relationships ------------------------------------------------------

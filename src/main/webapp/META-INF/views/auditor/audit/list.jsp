@@ -20,6 +20,7 @@
 	<acme:list-column code="auditor.audit.list.label.title" path="title" width="20%"/>
 	<acme:list-column code="auditor.audit.list.label.moment" path="moment" width="20%"/>
 	
+  	<acme:form-return code="auditor.audit.list.button.return"/>
 </acme:list>
 
 

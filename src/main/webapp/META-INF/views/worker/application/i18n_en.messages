@@ -12,6 +12,8 @@ worker.application.list.label.reference = Reference Number
 worker.application.list.label.moment = Moment
 worker.application.list.label.status = Status
 
+worker.application.form.label.JobEmployer = Job employer
+worker.application.form.label.referenceJob = Job reference
 worker.application.form.label.reference = Reference Number
 worker.application.form.label.moment = Moment
 worker.application.form.label.status = Status
