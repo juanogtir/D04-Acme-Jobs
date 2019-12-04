@@ -18,7 +18,7 @@
 
 <acme:list>
 	<acme:list-column code="authenticated.thread.list.label.title" path="title" width="80%" />
-	<acme:list-column code="authenticated.thread.list.label.deadline" path="deadline" width="10%" />
+	<acme:list-column code="authenticated.thread.list.label.creationDate" path="creationDate" width="10%" />
 </acme:list>
 
 

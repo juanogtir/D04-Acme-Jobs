@@ -10,7 +10,7 @@
 
 authenticated.thread.form.label.messages.author = Autor:
 authenticated.thread.form.label.title = Título:
-authenticated.thread.form.label.deadline = Fecha de creación:
+authenticated.thread.form.label.creationDate = Fecha de creación:
 authenticated.thread.form.label.messages = Mensajes
 authenticated.thread.form.label.messages.title = Título del mensaje:
 authenticated.thread.form.label.messages.tags = Etiquetas del mensaje:
@@ -20,4 +20,4 @@ authenticated.thread.form.label.messages.moment = Instante de publicación del m
 authenticated.thread.form.button.return = Volver
 
 authenticated.thread.list.label.title = Título
-authenticated.thread.list.label.deadline = Fecha límite
+authenticated.thread.list.label.creationDate = Creation date

@@ -35,7 +35,7 @@ public class AuthenticatedThreadListService implements AbstractListService<Authe
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline");
+		request.unbind(entity, model, "title", "creationDate");
 	}
 
 	@Override

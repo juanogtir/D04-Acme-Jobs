@@ -1828,8 +1828,27 @@
 		<property name="job" ref="job1" />
 	</bean>
 
+	<bean name="application9" class="acme.entities.applications.Application">
+		<property name="reference" value="EEEG-JJJG:WWWA" />
+		<property name="moment" value="2018/07/11 01:00" />
+		<property name="status" value="rejected" />
+		<property name="statement" value="This is an example 9" />
+		<property name="skills" value="You need to have Skills Example 9" />
+		<property name="qualifications" value="You need to have Qualifications Example 9" />
+		<property name="worker" ref="worker1Worker" />
+		<property name="job" ref="job7" />
+	</bean>
 
-
+	<bean name="application10" class="acme.entities.applications.Application">
+		<property name="reference" value="EEEH-JJJH:WWWB" />
+		<property name="moment" value="2018/07/11 01:00" />
+		<property name="status" value="pending" />
+		<property name="statement" value="This is an example 10" />
+		<property name="skills" value="You need to have Skills Example 10" />
+		<property name="qualifications" value="You need to have Qualifications Example 10" />
+		<property name="worker" ref="worker2Worker" />
+		<property name="job" ref="job8" />
+	</bean>
 	
 	<!-- Message's bean -->
 
@@ -1967,7 +1986,7 @@
 
 	<bean name="thread1" class="acme.entities.threads.Thread">
 		<property name="title" value="Sample thread 1" />
-		<property name="deadline" value="2010/12/01 23:59" />
+		<property name="creationDate" value="2010/12/01 23:59" />
 		<property name="messages">
 			<list>
 				<ref bean="message4" />
@@ -1977,7 +1996,7 @@
 
 	<bean name="thread2" class="acme.entities.threads.Thread">
 		<property name="title" value="Sample thread 2" />
-		<property name="deadline" value="2019/08/02 21:12" />
+		<property name="creationDate" value="2015/08/02 21:12" />
 		<property name="messages">
 			<list>
 				<ref bean="message1" />
@@ -1990,7 +2009,7 @@
 	
 	<bean name="thread3" class="acme.entities.threads.Thread">
 		<property name="title" value="Sample thread 3" />
-		<property name="deadline" value="2020/09/02 05:25" />
+		<property name="creationDate" value="2017/09/02 05:25" />
 		<property name="messages">
 			<list>
 				<ref bean="message5" />
@@ -2001,7 +2020,7 @@
 
 	<bean name="thread4" class="acme.entities.threads.Thread">
 		<property name="title" value="Sample thread 4" />
-		<property name="deadline" value="2030/12/11 23:59" />
+		<property name="creationDate" value="2014/12/11 23:59" />
 		<property name="messages">
 			<list>
 				<ref bean="message6" />
