@@ -17,7 +17,7 @@
 
 <acme:form>
 	<acme:form-textbox code="authenticated.thread.form.label.title" path="title" />
-	<acme:form-moment code="authenticated.thread.form.label.deadline" path="deadline" />
+	<acme:form-moment code="authenticated.thread.form.label.creationDate" path="creationDate" />
 	<acme:menu-separator />
 	
 	<!-- Messages -->

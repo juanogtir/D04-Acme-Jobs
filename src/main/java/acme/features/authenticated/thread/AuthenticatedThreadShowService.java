@@ -51,7 +51,7 @@ public class AuthenticatedThreadShowService implements AbstractShowService<Authe
 
 		Collection<Message> messagesCollection = entity.getMessages();
 
-		request.unbind(entity, model, "title", "deadline");
+		request.unbind(entity, model, "title", "creationDate");
 		model.setAttribute("messagesCollection", messagesCollection);
 	}
 
