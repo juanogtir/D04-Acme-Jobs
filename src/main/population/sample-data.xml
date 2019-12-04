@@ -1344,7 +1344,7 @@
 
 	<bean name="job6" class="acme.entities.jobs.Job">
 		<property name="referenceNumber" value="EFXI-JQHZ" />
-		<property name="title" value="Title 5" />
+		<property name="title" value="Title 6" />
 		<property name="deadline" value="2085/04/25 06:57" />
 		<property name="salary" value="€ 14,000.00" />
 		<property name="moreInfo" value="http://www.moreinfo.com/" />
@@ -1355,6 +1355,34 @@
 			<list>
 				<ref bean="audit6" />
 			</list>
+		</property>
+	</bean>
+	
+	<bean name="job7" class="acme.entities.jobs.Job">
+		<property name="referenceNumber" value="EFMI-JLHB" />
+		<property name="title" value="Title 7" />
+		<property name="deadline" value="1999/04/25 06:57" />
+		<property name="salary" value="€ 15,000.00" />
+		<property name="moreInfo" value="http://www.moreinfo.com/" />
+		<property name="finalMode" value="true" />
+		<property name="employer" ref="employer2Employer" />
+		<property name="descriptor" ref="descriptor7Descriptor" />
+		<property name="audits">
+		<null />
+		</property>
+	</bean>
+	
+	<bean name="job8" class="acme.entities.jobs.Job">
+		<property name="referenceNumber" value="ELAI-JUIB" />
+		<property name="title" value="Title 8" />
+		<property name="deadline" value="1999/04/25 06:57" />
+		<property name="salary" value="€ 11,000.00" />
+		<property name="moreInfo" value="http://www.moreinfo.com/" />
+		<property name="finalMode" value="false" />
+		<property name="employer" ref="employer1Employer" />
+		<property name="descriptor" ref="descriptor8Descriptor" />
+		<property name="audits">
+		<null />
 		</property>
 	</bean>
 
@@ -1374,7 +1402,6 @@
 		<property name="description" value="Description sample of a Descriptor2" />
 		<property name="duties">
 			<list>
-				<ref bean="duty2Duty" />
 				<ref bean="duty3Duty" />
 				<ref bean="duty4Duty" />
 				<ref bean="duty11Duty" />
@@ -1395,7 +1422,6 @@
 		<property name="description" value="Description sample of a Descriptor4" />
 		<property name="duties">
 			<list>
-				<ref bean="duty5Duty" />
 				<ref bean="duty8Duty" />
 				<ref bean="duty10Duty" />
 			</list>
@@ -1417,6 +1443,24 @@
 		<property name="duties">
 			<list>
 				<ref bean="duty12Duty" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="descriptor7Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description sample of a Descriptor7" />
+		<property name="duties">
+			<list>
+				<ref bean="duty5Duty" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="descriptor8Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description sample of a Descriptor8" />
+		<property name="duties">
+			<list>
+				<ref bean="duty2Duty" />
 			</list>
 		</property>
 	</bean>

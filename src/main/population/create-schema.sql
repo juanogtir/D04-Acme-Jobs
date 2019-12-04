@@ -309,9 +309,13 @@
     insert into `hibernate_sequence` values ( 1 );
 create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
 create index IDX2q2747fhp099wkn3j2yt05fhs on `application` (`status`);
+create index IDXcrvjp8sf0i8iqrwto3rffmy0t on `application` (`job_id`);
+create index IDXg3x3iw20tabtrr8amqor0ym9d on `application` (`worker_id`);
 
     alter table `application` 
        add constraint UK_ct7r18vvxl5g4c4k7aefpa4do unique (`reference`);
+create index IDX65jthic0uknhokegf3f5ive0r on `audit` (`job_id`);
+create index IDXoqmmqbafwj4m9wgwqexcmckjs on `audit` (`final_mode`);
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 create index IDX3vwg77973akwy9ilnfq707yt1 on `company` (`stars`);
 create index IDXbm7mwffwxwiukjmbmt9t1qnnu on `company` (`sector`);
@@ -322,12 +326,14 @@ create index IDXq1q335kxox0leg1u9hhndvue1 on `investor` (`stars`);
 create index IDX1slmmcr1g0wv9jbgun6rny0oy on `investor` (`sector`);
 create index IDXfdmpnr8o4phmk81sqsano16r on `job` (`deadline`);
 create index IDXt84ibbldao4ngscmvo7ja0es on `job` (`final_mode`);
+create index IDXdstv314v9ijni4ogn5daw8ruh on `job` (`employer_id`);
 
     alter table `job` 
        add constraint UK_qpodqtu8nvqkof3olnqnqcv2l unique (`descriptor_id`);
 
     alter table `job` 
        add constraint UK_bos0omdc9s5vykasqjhwaq65m unique (`reference_number`);
+create index IDXi0g386076akx08bjn1uo6egp0 on `message` (`user_id`);
 create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
 create index IDXcp4664f36sgqsd0ihmirt0w0 on `offer` (`ticker`);
 
